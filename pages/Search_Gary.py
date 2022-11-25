@@ -51,9 +51,9 @@ def main():
     st.title('Search in Firebase')
 
     c_URL = st.container()
-    databaseURL = 'https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/'
-    c_URL_submitted = c_URL.text_input('Please enter your database URL:  ')
-    if c_URL_submitted:
+    # databaseURL = 'https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/'
+    databaseURL = c_URL.text_input('Please enter your database URL:  ')
+    if databaseURL:
         c_URL.info('✔️ Succeed!')
     else:
         st.stop()
