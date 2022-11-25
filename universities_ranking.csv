@@ -33,7 +33,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 32,LMU Munich,Germany,"34,249",33.6,17%,61:39:00
 33,"University of California, San Diego",United States,"34,232",12,30%,47:53:00
 34,University of British Columbia,Canada,"53,123",18.7,32%,55:45:00
-35,King°Øs College London,United Kingdom,"27,400",12.4,46%,62:38:00
+35,King‚Äôs College London,United Kingdom,"27,400",12.4,46%,62:38:00
 36,Karolinska Institute,Sweden,"7,696",8.8,26%,68:32:00
 37,The University of Tokyo,Japan,"25,935",10.6,13%,n/a
 38,Georgia Institute of Technology,United States,"26,043",23.6,27%,33 : 67
@@ -41,10 +41,10 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 40,McGill University,Canada,"31,578",12.8,31%,59:41:00
 41,Technical University of Munich,Germany,"32,377",39.8,31%,36 : 64
 42,Heidelberg University,Germany,"20,020",14.5,18%,54:46:00
-43,®¶cole Polytechnique F®¶d®¶rale de Lausanne,Switzerland,"10,942",12.2,60%,29 : 71
+43,√©cole Polytechnique F√©d√©rale de Lausanne,Switzerland,"10,942",12.2,60%,29 : 71
 44,University of Texas at Austin,United States,"49,510",16.9,10%,52:48:00
 45,KU Leuven,Belgium,"45,617",36.1,15%,50:50:00
-46,Paris Sciences et Lettres ®C PSL Research University Paris,France,"20,701",14.7,24%,46:54:00
+46,Paris Sciences et Lettres ‚Äì PSL Research University Paris,France,"20,701",14.7,24%,46:54:00
 47,"Nanyang Technological University, Singapore",Singapore,"23,902",14.8,25%,48:52:00
 48,University of Illinois at Urbana-Champaign,United States,"45,980",17.8,24%,48:52:00
 49,University of Wisconsin-Madison,United States,"39,451",9.8,13%,n/a
@@ -73,11 +73,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 72,Erasmus University Rotterdam,Netherlands,"26,453",26.8,22%,50:50:00
 73,University of Montreal,Canada,"36,774",20.2,21%,n/a
 74,University of Zurich,Switzerland,"22,960",14.8,21%,57:43:00
-75,Charit®¶ - Universit?tsmedizin Berlin,Germany,"7,431",17.4,20%,65:35:00
+75,Charit√© - Universit?tsmedizin Berlin,Germany,"7,431",17.4,20%,65:35:00
 76,Utrecht University,Netherlands,"32,022",14,10%,58:42:00
 77,University of Warwick,United Kingdom,"21,777",13.3,41%,49:51:00
 78,Delft University of Technology,Netherlands,"19,594",17.4,31%,30 : 70
-79,University of T®πbingen,Germany,"27,590",36.6,14%,58:42:00
+79,University of T√ºbingen,Germany,"27,590",36.6,14%,58:42:00
 80,University of Groningen,Netherlands,"28,392",23.9,23%,51:49:00
 81,Humboldt University of Berlin,Germany,"33,388",56.3,18%,n/a
 82,Ohio State University (Main campus),United States,"54,650",12.1,13%,50:50:00
@@ -85,7 +85,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 84,University of Copenhagen,Denmark,"30,746",4.2,17%,62:38:00
 85,Emory University,United States,"12,923",4,20%,59:41:00
 86,University of Minnesota,United States,"61,994",12.4,11%,53:47:00
-87,®¶cole Polytechnique,France,"2,850",5.6,44%,1.011805556
+87,√©cole Polytechnique,France,"2,850",5.6,44%,1.011805556
 88,University of Science and Technology of China,China,"16,434",7.2,5%,n/a
 89,Sorbonne University,France,"43,585",12.8,20%,58:42:00
 90,"University of Maryland, College Park",United States,"33,671",16.6,11%,48:52:00
@@ -142,7 +142,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 141,University of Mannheim,Germany,"10,593",78.3,18%,n/a
 142,Technical University of Berlin,Germany,"22,695",60.8,26%,34 : 66
 143,Ulm University,Germany,"10,503",28.4,13%,49:51:00
-144,University of W®πrzburg,Germany,"23,887",38.2,10%,56:44:00
+144,University of W√ºrzburg,Germany,"23,887",38.2,10%,56:44:00
 145,University of Cologne,Germany,"34,630",35,18%,n/a
 146,University of Ottawa,Canada,"35,140",24.6,20%,58:42:00
 147,University of Auckland,New Zealand,"32,596",22.6,31%,56:44:00
@@ -162,7 +162,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 161,University of Sussex,United Kingdom,"16,259",15.8,37%,55:45:00
 162,University of Technology Sydney,Australia,"26,529",41.7,36%,51:49:00
 163,University of Liverpool,United Kingdom,"25,168",14.6,33%,55:45:00
-164,Universit®¶ Catholique de Louvain,Belgium,"26,462",39.7,20%,53:47:00
+164,Universit√© Catholique de Louvain,Belgium,"26,462",39.7,20%,53:47:00
 165,University of Vienna,Austria,"32,650",38.5,28%,65:35:00
 166,"Rutgers, the State University of New Jersey",United States,"44,264",11,17%,52:48:00
 167,University of Bologna,Italy,"67,298",24.4,12%,56:44:00
@@ -171,7 +171,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 170,University of Antwerp,Belgium,"15,272",31.2,17%,55:45:00
 171,University of Leicester,United Kingdom,"15,551",14.7,32%,53:47:00
 172,University of Notre Dame,United States,"12,149",10.9,12%,46:54:00
-173,Sant°ØAnna School of Advanced Studies ®C Pisa,Italy,661,10,20%,36 : 64
+173,Sant‚ÄôAnna School of Advanced Studies ‚Äì Pisa,Italy,661,10,20%,36 : 64
 174,University of Exeter,United Kingdom,"22,007",17,28%,54:46:00
 175,Lomonosov Moscow State University,Russian Federation,"28,525",8.4,32%,52:48:00
 176,Northeastern University,United States,"20,711",14.1,36%,48:52:00
@@ -194,13 +194,13 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 193,University of Lausanne,Switzerland,"12,685",8.8,24%,n/a
 194,Tel Aviv University,Israel,"22,635",22.3,7%,56:44:00
 195,Macquarie University,Australia,"29,835",65.5,29%,53:47:00
-196,University of M®πnster,Germany,"44,580",42.9,8%,n/a
+196,University of M√ºnster,Germany,"44,580",42.9,8%,n/a
 197,Texas A&M University,United States,"62,070",24.4,8%,47:53:00
 198,University of Barcelona,Spain,"45,494",15,11%,62:38:00
 199,University of Erlangen-Nuremberg,Germany,"38,052",57.3,12%,49:51:00
 200,University of Calgary,Canada,"31,863",17.6,21%,54:46:00
 201,University of East Anglia,United Kingdom,"15,757",13.8,27%,59:41:00
-202,Queen°Øs University Belfast,United Kingdom,"18,438",17.2,36%,56:44:00
+202,Queen‚Äôs University Belfast,United Kingdom,"18,438",17.2,36%,56:44:00
 203,Aalborg University,Denmark,"16,227",13.4,14%,n/a
 204,Aalto University,Finland,"12,506",18.6,24%,37 : 63
 205,University of Bath,United Kingdom,"14,410",16.2,33%,46:54:00
@@ -213,7 +213,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 212,University of Duisburg-Essen,Germany,"42,744",53.6,19%,48:52:00
 213,University of Dundee,United Kingdom,"12,247",17.5,22%,63:37:00
 214,Griffith University,Australia,"33,645",28.6,17%,58:42:00
-215,University of Hawai°Øi at M®°noa,United States,"14,732",10.6,10%,57:43:00
+215,University of Hawai‚Äôi at MƒÅnoa,United States,"14,732",10.6,10%,57:43:00
 216,Hebrew University of Jerusalem,Israel,"16,105",11.9,5%,57:43:00
 217,University of Hohenheim,Germany,"9,235",42.5,15%,57:43:00
 218,Howard University,United States,"8,766",9.3,8%,67:33:00
@@ -223,7 +223,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 222,King Abdulaziz University,Saudi Arabia,"31,869",7.8,22%,54:46:00
 223,KTH Royal Institute of Technology,Sweden,"13,482",16.5,20%,33 : 67
 224,La Trobe University,Australia,"22,303",31.9,30%,64:36:00
-225,Universit®¶ Libre de Bruxelles,Belgium,"24,157",42.1,31%,56:44:00
+225,Universit√© Libre de Bruxelles,Belgium,"24,157",42.1,31%,56:44:00
 226,University of Luxembourg,Luxembourg,"4,858",19,51%,52:48:00
 227,University of Massachusetts,United States,"61,958",13.3,15%,48:52:00
 228,Medical University of Graz,Austria,"3,541",12.1,25%,52:48:00
@@ -234,12 +234,12 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 233,University of Otago,New Zealand,"18,571",20.4,21%,59:41:00
 234,RCSI University of Medicine and Health Sciences,Ireland,"2,355",23.1,65%,n/a
 235,University of Reading,United Kingdom,"15,207",15.8,31%,57:43:00
-236,"St George°Øs, University of London",United Kingdom,"3,425",12,21%,62:38:00
+236,"St George‚Äôs, University of London",United Kingdom,"3,425",12,21%,62:38:00
 237,University of S?o Paulo,Brazil,"82,961",16.1,4%,47:53:00
 238,Sapienza University of Rome,Italy,"77,496",22.9,7%,57:43:00
 239,University of South Florida (Tampa),United States,"34,839",19.2,15%,n/a
 240,University of St Andrews,United Kingdom,"9,614",12.8,47%,58:42:00
-241,T®¶l®¶com Paris,France,897,5.4,43%,0.847916667
+241,T√©l√©com Paris,France,897,5.4,43%,0.847916667
 242,Tilburg University,Netherlands,"9,380",24,16%,47:53:00
 243,Tohoku University,Japan,"17,752",11.7,12%,27 : 73
 244,University of Twente,Netherlands,"8,207",14.4,35%,37 : 63
@@ -258,8 +258,8 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 257,University of Cincinnati,United States,"29,309",20.5,9%,51:49:00
 258,Dalhousie University,Canada,"15,651",13.3,26%,54:46:00
 259,Deakin University,Australia,"41,341",33.9,26%,57:43:00
-260,®¶cole des Ponts ParisTech,France,"2,059",11.5,43%,31 : 69
-261,®¶cole Normale Sup®¶rieure de Lyon,France,"2,362",9,13%,48:52:00
+260,√©cole des Ponts ParisTech,France,"2,059",11.5,43%,31 : 69
+261,√©cole Normale Sup√©rieure de Lyon,France,"2,362",9,13%,48:52:00
 262,Flinders University,Australia,"17,167",25.4,40%,64:36:00
 263,Florida State University,United States,"38,368",25.8,7%,57:43:00
 264,Friedrich Schiller University Jena,Germany,"17,063",20.1,14%,n/a
@@ -271,7 +271,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 270,University of Kiel,Germany,"27,181",22.3,8%,53:47:00
 271,University of Konstanz,Germany,"11,553",51.1,13%,55:45:00
 272,Kyung Hee University,South Korea,"20,862",17.5,23%,54:46:00
-273,Universit®¶ Laval,Canada,"28,874",17.2,13%,58:42:00
+273,Universit√© Laval,Canada,"28,874",17.2,13%,58:42:00
 274,Macau University of Science and Technology,Macao,"10,596",24.9,84%,56:44:00
 275,University of Navarra,Spain,"11,329",14.9,24%,54:46:00
 276,University of Newcastle,Australia,"23,221",21.7,18%,55:45:00
@@ -280,7 +280,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 279,Oregon Health and Science University,United States,"2,999",1,3%,66:34:00
 280,University of Padua,Italy,"46,900",21.7,7%,55:45:00
 281,University of Potsdam,Germany,"20,668",55,12%,57:43:00
-282,Queen°Øs University,Canada,"24,354",26.1,14%,58:42:00
+282,Queen‚Äôs University,Canada,"24,354",26.1,14%,58:42:00
 283,Ruhr University Bochum,Germany,"42,954",59.5,15%,49:51:00
 284,Simon Fraser University,Canada,"26,778",27.5,30%,55:45:00
 285,University of Southern Denmark,Denmark,"22,544",12.7,14%,53:47:00
@@ -291,7 +291,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 290,University of Surrey,United Kingdom,"14,315",16.3,38%,54:46:00
 291,Swansea University,United Kingdom,"17,353",16.5,22%,45:55:00
 292,University of Tartu,Estonia,"8,735",11.9,10%,68:32:00
-293,Universit®§ della Svizzera Italiana,Switzerland,"2,713",10.3,67%,49:51:00
+293,Universit√† della Svizzera Italiana,Switzerland,"2,713",10.3,67%,49:51:00
 294,University College Dublin,Ireland,"23,148",23.2,30%,n/a
 295,Vita-Salute San Raffaele University,Italy,"2,880",9.8,4%,60:40:00
 296,Vrije Universiteit Brussel,Belgium,"12,041",29.8,23%,55:45:00
@@ -327,7 +327,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 326,University of Passau,Germany,"11,249",91.4,14%,59:41:00
 327,Peter the Great St Petersburg Polytechnic University,Russian Federation,"16,768",9.2,31%,39 : 61
 328,Qatar University,Qatar,"8,808",9.2,37%,75:25:00
-329,Reykjav®™k University,Iceland,"2,501",23.4,9%,46:54:00
+329,Reykjav√≠k University,Iceland,"2,501",23.4,9%,46:54:00
 330,RMIT University,Australia,"33,427",23.1,33%,48:52:00
 331,"Royal Holloway, University of London",United Kingdom,"9,686",14.7,35%,58:42:00
 332,Rush University,United States,"2,624",2.2,2%,74:26:00
@@ -374,7 +374,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 373,Khalifa University,United Arab Emirates,"3,164",9.7,19%,59:41:00
 374,University of KwaZulu-Natal,South Africa,"36,731",28.8,4%,58:42:00
 375,Lappeenranta-Lahti University of Technology LUT,Finland,"4,099",29.2,16%,31 : 69
-376,University of Li®®ge,Belgium,"20,968",25.9,20%,57:43:00
+376,University of Li√®ge,Belgium,"20,968",25.9,20%,57:43:00
 377,Loughborough University,United Kingdom,"14,802",13.7,27%,41:59:00
 378,University of Manitoba,Canada,"28,786",28.9,18%,53:47:00
 379,University of Milan,Italy,"45,752",20.9,6%,59:41:00
@@ -395,7 +395,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 394,University of Turku,Finland,"12,813",15.8,6%,63:37:00
 395,UiT The Arctic University of Norway,Norway,"14,276",10.4,11%,58:42:00
 396,Ume? University,Sweden,"17,055",12.4,11%,60:40:00
-397,Universit®¶ de Versailles Saint-Quentin-en-Yvelines,France,"16,699",21.2,16%,60:40:00
+397,Universit√© de Versailles Saint-Quentin-en-Yvelines,France,"16,699",21.2,16%,60:40:00
 398,Victoria University,Australia,"15,838",44.1,28%,52:48:00
 399,University of Victoria,Canada,"21,317",25.2,21%,55:45:00
 400,Wayne State University,United States,"22,359",11.6,7%,57:43:00
@@ -428,7 +428,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 427,Durban University of Technology,South Africa,"23,432",33.3,1%,52:48:00
 428,University of Eastern Finland,Finland,"11,742",18.8,6%,64:36:00
 429,Edith Cowan University,Australia,"17,756",28.8,27%,60:40:00
-430,Federal University of Toulouse Midi-Pyr®¶n®¶es,France,"104,479",16.5,14%,54:46:00
+430,Federal University of Toulouse Midi-Pyr√©n√©es,France,"104,479",16.5,14%,54:46:00
 431,University of Florence,Italy,"36,497",21,10%,59:41:00
 432,Florida International University,United States,"33,974",23.7,8%,58:42:00
 433,Free University of Bozen-Bolzano,Italy,"3,891",11.9,12%,67:33:00
@@ -450,7 +450,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 449,Ko? University,Turkey,"5,440",16,6%,50:50:00
 450,Kyushu University,Japan,"18,714",9.3,13%,28 : 72
 451,Link?ping University,Sweden,"18,628",11.2,11%,54:46:00
-452,L°Øinstitut Agro,France,"2,120",10.9,16%,62:38:00
+452,L‚Äôinstitut Agro,France,"2,120",10.9,16%,62:38:00
 453,Liverpool John Moores University,United Kingdom,"20,201",16.9,15%,53:47:00
 454,Makerere University,Uganda,"30,486",20.8,3%,52:48:00
 455,Mansoura University,Egypt,"140,144",23.8,3%,58:42:00
@@ -476,7 +476,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 475,Polytechnic University of Bari,Italy,"6,729",28.9,2%,32 : 68
 476,Pontifical Javeriana University,Colombia,"29,281",15.3,1%,55:45:00
 477,University of Porto,Portugal,"32,586",17.6,18%,55:45:00
-478,University of Rome II ®C Tor Vergata,Italy,"25,893",13.8,13%,53:47:00
+478,University of Rome II ‚Äì Tor Vergata,Italy,"25,893",13.8,13%,53:47:00
 479,Royal Veterinary College,United Kingdom,"2,191",10.9,23%,79:21:00
 480,University of St Gallen,Switzerland,"7,759",12,33%,35 : 65
 481,Saint-Petersburg Mining University ,Russian Federation,"7,705",11.4,11%,40 : 60
@@ -489,7 +489,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 488,University of Siena,Italy,"13,232",17.6,9%,61:39:00
 489,University of South Carolina-Columbia,United States,"32,445",16.4,6%,54:46:00
 490,South China University of Technology,China,"40,581",13.4,5%,38 : 62
-491,SRUC (Scotland°Øs Rural College),United Kingdom,"1,442",9.4,11%,54:46:00
+491,SRUC (Scotland‚Äôs Rural College),United Kingdom,"1,442",9.4,11%,54:46:00
 492,University of Strathclyde,United Kingdom,"18,787",18.5,27%,50:50:00
 493,Technion Israel Institute of Technology,Israel,"14,740",21.8,8%,37 : 63
 494,Tianjin University,China,"37,405",14.5,7%,n/a
@@ -503,12 +503,12 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 502,University of Valencia,Spain,"49,822",14.4,12%,59:41:00
 503,Verona University,Italy,"20,140",27.2,5%,65:35:00
 504,University of the West of England,United Kingdom,"22,045",15.5,21%,54:46:00
-505,Xi°Øan Jiaotong University,China,"36,551",12.5,7%,36 : 64
+505,Xi‚Äôan Jiaotong University,China,"36,551",12.5,7%,36 : 64
 506,York University,Canada,"49,353",37.7,25%,57:43:00
 507,Abdul Wali Khan University Mardan,Pakistan,"9,664",22.7,1%,29 : 71
 508,Amirkabir University of Technology,Iran,"11,672",22.1,2%,36 : 64
-509,University of L°ØAquila,Italy,"17,322",39.5,4%,57:43:00
-510,Universidad Aut®Ænoma de Chile,Chile,"24,541",23.2,1%,65:35:00
+509,University of L‚ÄôAquila,Italy,"17,322",39.5,4%,57:43:00
+510,Universidad Aut√≥noma de Chile,Chile,"24,541",23.2,1%,65:35:00
 511,Bar-Ilan University,Israel,"16,587",17.5,5%,61:39:00
 512,Beihang University,China,"30,172",13.2,7%,n/a
 513,Beijing University of Chemical Technology,China,"25,739",24.7,4%,38 : 62
@@ -517,16 +517,16 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 516,Bond University,Australia,"3,498",10.2,47%,53:47:00
 517,Carleton University,Canada,"28,350",30.2,21%,49:51:00
 518,University of Catania,Italy,"26,838",21.9,3%,56:44:00
-519,CentraleSup®¶lec,France,"4,007",9.8,27%,0.929861111
+519,CentraleSup√©lec,France,"4,007",9.8,27%,0.929861111
 520,Charles Darwin University,Australia,"6,219",23.7,30%,67:33:00
 521,Claude Bernard University Lyon 1,France,"27,490",13,13%,53:47:00
 522,Complutense University of Madrid,Spain,"61,732",20.1,12%,61:39:00
 523,University of Costa Rica,Costa Rica,"34,776",15,2%,53:47:00
-524,University of C?te d°ØAzur,France,"32,277",19.9,21%,55:45:00
+524,University of C?te d‚ÄôAzur,France,"32,277",19.9,21%,55:45:00
 525,University of Cyprus,Cyprus,"6,815",22.2,11%,64:36:00
 526,Dublin City University,Ireland,"13,423",22.8,14%,56:44:00
 527,University of Electronic Science and Technology of China,China,"32,932",15.3,3%,27 : 73
-528,Ferhat Abbas S®¶tif University 1,Algeria,"35,899",24.3,1%,54:46:00
+528,Ferhat Abbas S√©tif University 1,Algeria,"35,899",24.3,1%,54:46:00
 529,University of Ferrara,Italy,"17,025",27.9,7%,59:41:00
 530,Fujita Health University,Japan,"3,065",3.1,0%,56:44:00
 531,Graz University of Technology,Austria,"6,297",9.6,21%,24 : 76
@@ -588,7 +588,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 587,University of Tehran,Iran,"44,960",21.2,2%,44:56:00
 588,Tehran University of Medical Sciences,Iran,"11,748",6.5,7%,58:42:00
 589,Teikyo University,Japan,"23,031",16.6,3%,35 : 65
-590,T®¶l®¶com SudParis,France,960,11.3,34%,24 : 76
+590,T√©l√©com SudParis,France,960,11.3,34%,24 : 76
 591,The University of Texas at San Antonio,United States,"25,892",25.1,4%,51:49:00
 592,Tomsk State University,Russian Federation,"7,798",11.7,35%,n/a
 593,University of Trieste,Italy,"16,217",24.7,9%,56:44:00
@@ -622,11 +622,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 621,Bilkent University,Turkey,"10,093",14.2,9%,46:54:00
 622,Birmingham City University,United Kingdom,"20,817",18,24%,62:38:00
 623,Bo?azi?i University,Turkey,"13,772",24.5,3%,45:55:00
-624,Universit®¶ Bourgogne Franche-Comt®¶ (UBFC),France,"61,908",34.1,12%,54:46:00
+624,Universit√© Bourgogne Franche-Comt√© (UBFC),France,"61,908",34.1,12%,54:46:00
 625,University of Bradford,United Kingdom,"8,455",17.8,28%,57:43:00
 626,University of Brighton,United Kingdom,"17,068",18.7,21%,60:40:00
 627,Bucharest University of Economic Studies,Romania,"21,340",15.8,4%,63:37:00
-628,Ca°Ø Foscari University of Venice,Italy,"16,187",26.3,10%,64:36:00
+628,Ca‚Äô Foscari University of Venice,Italy,"16,187",26.3,10%,64:36:00
 629,Cairo University,Egypt,"222,102",41.6,2%,48:52:00
 630,University of Calabria,Italy,"26,745",33,3%,58:42:00
 631,University of Central Florida,United States,"58,425",35.7,4%,56:44:00
@@ -648,10 +648,10 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 647,University of Delhi,India,"24,725",25.5,1%,47:53:00
 648,De Montfort University,United Kingdom,"21,134",19.9,30%,55:45:00
 649,University of Deusto,Spain,"9,553",22.6,11%,60:40:00
-650,®¶cole des Mines de Saint-®¶tienne,France,"1,110",9,25%,26 : 74
-651,®¶cole normale sup®¶rieure Paris-Saclay,France,"1,850",12.2,16%,29 : 71
+650,√©cole des Mines de Saint-√©tienne,France,"1,110",9,25%,26 : 74
+651,√©cole normale sup√©rieure Paris-Saclay,France,"1,850",12.2,16%,29 : 71
 652,Edinburgh Napier University,United Kingdom,"10,384",18.1,31%,55:45:00
-653,E?tv?s Lor®¢nd University,Hungary,"27,199",14.8,10%,63:37:00
+653,E?tv?s Lor√°nd University,Hungary,"27,199",14.8,10%,63:37:00
 654,European University of Madrid,Spain,"10,307",10.3,31%,47:53:00
 655,Ewha Womans University,South Korea,"14,824",17.2,13%,100:00:00
 656,Federal University of Minas Gerais,Brazil,"43,833",12.2,2%,53:47:00
@@ -659,7 +659,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 658,Federal University of Santa Catarina,Brazil,"38,362",16.1,3%,48:52:00
 659,Federal University of S?o Paulo (UNIFESP),Brazil,"14,526",5.3,1%,61:39:00
 660,Federal University of Sergipe (UFS),Brazil,"25,821",15,0%,52:48:00
-661,Gabriele d°ÆAnnunzio University,Italy,"24,710",37.4,2%,64:36:00
+661,Gabriele d‚ÄòAnnunzio University,Italy,"24,710",37.4,2%,64:36:00
 662,University of Girona,Spain,"13,920",21.1,14%,58:42:00
 663,Glasgow Caledonian University,United Kingdom,"13,236",21.2,18%,58:42:00
 664,University of Granada,Spain,"56,173",15.7,12%,59:41:00
@@ -697,7 +697,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 696,Kazan Federal University,Russian Federation,"25,940",9.7,25%,68:32:00
 697,Universiti Kebangsaan Malaysia,Malaysia,"17,601",10.3,16%,57:43:00
 698,Keio University,Japan,"34,498",10,9%,37 : 63
-699,King George°Æs Medical University,India,"2,934",6.9,0%,46:54:00
+699,King George‚Äòs Medical University,India,"2,934",6.9,0%,46:54:00
 700,Kobe University,Japan,"15,676",9.9,8%,35 : 65
 701,Konkuk University,South Korea,"12,047",22.8,17%,51:49:00
 702,University of Kurdistan,Iran,"10,555",31,3%,54:46:00
@@ -720,7 +720,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 719,Masaryk University,Czech Republic,"31,107",19.6,22%,62:38:00
 720,Massey University,New Zealand,"18,664",16.5,32%,63:37:00
 721,Metropolitan Autonomous University,Mexico,"58,623",20.2,0%,48:52:00
-722,Miguel Hern®¢ndez University of Elche ,Spain,"11,695",17,6%,48:52:00
+722,Miguel Hern√°ndez University of Elche ,Spain,"11,695",17,6%,48:52:00
 723,University of Missouri-St Louis,United States,"6,777",15.5,5%,58:42:00
 724,University of Mohaghegh Ardabili,Iran,"10,427",27.2,0%,54:46:00
 725,Montana State University,United States,"14,153",17.6,3%,47:53:00
@@ -750,15 +750,15 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 749,Palacky University Olomouc,Czech Republic,"17,337",13.8,13%,69:31:00
 750,University of Palermo,Italy,"29,820",20.7,1%,58:42:00
 751,Panjab University,India,"19,006",20.3,1%,49:51:00
-752,Panth®¶on-Sorbonne University ®C Paris 1,France,"33,714",27.2,21%,60:40:00
+752,Panth√©on-Sorbonne University ‚Äì Paris 1,France,"33,714",27.2,21%,60:40:00
 753,University of Parma,Italy,"26,046",29.8,6%,56:44:00
 754,Parthenope University of Naples,Italy,"12,106",35.9,2%,43:57:00
-755,University of P®¶cs,Hungary,"16,798",11.7,24%,57:43:00
+755,University of P√©cs,Hungary,"16,798",11.7,24%,57:43:00
 756,Polytechnic University of Catalonia,Spain,"22,824",10,13%,27 : 73
 757,Pontifical Catholic University of Rio de Janeiro (PUC-Rio),Brazil,"14,999",19.5,4%,51:49:00
 758,University of Pretoria,South Africa,"35,387",23.1,7%,57:43:00
 759,Universiti Putra Malaysia,Malaysia,"19,937",12.1,25%,61:39:00
-760,Universit®¶ du Qu®¶bec,Canada,"53,354",19.7,12%,56:44:00
+760,Universit√© du Qu√©bec,Canada,"53,354",19.7,12%,56:44:00
 761,University of Rennes 1,France,"28,137",18.5,11%,53:47:00
 762,University of Rhode Island,United States,"16,254",15,3%,58:42:00
 763,University of Rome III,Italy,"32,361",49.9,5%,59:41:00
@@ -800,12 +800,12 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 799,University of Wisconsin-Milwaukee,United States,"20,490",18.7,6%,54:46:00
 800,Worcester Polytechnic Institute,United States,"5,761",12.5,22%,35 : 65
 801,University of Wuppertal,Germany,"23,117",59,11%,52:48:00
-802,Xi°Æan Jiaotong-Liverpool University,China,"11,388",23.3,7%,53:47:00
+802,Xi‚Äòan Jiaotong-Liverpool University,China,"11,388",23.3,7%,53:47:00
 803,Yasouj University,Iran,"6,023",25.7,0%,50:50:00
 804,Yokohama City University,Japan,"4,976",4.4,2%,56:44:00
 805,University of the Aegean,Greece,"14,297",43.5,1%,56:44:00
 806,"University of Agriculture, Faisalabad",Pakistan,"26,756",39.8,0%,44:56:00
-807,University of Alcal®¢,Spain,"19,400",14.6,19%,58:42:00
+807,University of Alcal√°,Spain,"19,400",14.6,19%,58:42:00
 808,University of Algarve,Portugal,"8,008",12.9,19%,57:43:00
 809,Aligarh Muslim University,India,"19,396",12.2,2%,39 : 61
 810,American University in Cairo,Egypt,"5,832",13.1,5%,55:45:00
@@ -822,7 +822,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 821,Beni-Suef University,Egypt,"73,693",26.7,1%,47:53:00
 822,Bharathiar University,India,"3,674",15.1,0%,67:33:00
 823,Bowling Green State University,United States,"15,333",16.3,4%,57:43:00
-824,University of Bras®™lia,Brazil,"45,594",14.9,2%,51:49:00
+824,University of Bras√≠lia,Brazil,"45,594",14.9,2%,51:49:00
 825,Capital Medical University,China,"13,374",4.8,5%,67:33:00
 826,Cardiff Metropolitan University,United Kingdom,"8,941",18.8,18%,55:45:00
 827,Carlos III University of Madrid,Spain,"17,652",11,16%,44:56:00
@@ -837,7 +837,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 836,"China University of Geosciences, Wuhan",China,"29,124",16.2,4%,n/a
 837,China University of Mining and Technology,China,"46,973",18.3,2%,33 : 67
 838,Chonnam National University,South Korea,"22,835",17.5,8%,48:52:00
-839,University of C®Ærdoba,Spain,"17,834",14.8,9%,56:44:00
+839,University of C√≥rdoba,Spain,"17,834",14.8,9%,56:44:00
 840,Covenant University,Nigeria,"8,601",16,0%,43:57:00
 841,University of Debrecen,Hungary,"26,938",14.1,21%,55:45:00
 842,Delhi Technological University,India,"9,000",22.6,1%,0.806944444
@@ -845,7 +845,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 844,East China University of Science and Technology,China,"25,985",15.9,2%,44:56:00
 845,Eastern Mediterranean University,Northern Cyprus,"18,205",24.5,81%,41:59:00
 846,University of East London,United Kingdom,"10,699",19,32%,62:38:00
-847,®¶cole Centrale de Lyon,France,"2,053",14.9,25%,28 : 72
+847,√©cole Centrale de Lyon,France,"2,053",14.9,25%,28 : 72
 848,Federal University of Pelotas,Brazil,"22,618",16.7,0%,56:44:00
 849,Federal University of Rio de Janeiro,Brazil,"59,963",14.6,1%,55:45:00
 850,Federation University Australia,Australia,"11,888",20.7,47%,54:46:00
@@ -872,20 +872,20 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 871,Istanbul Technical University,Turkey,"37,861",23,4%,34 : 66
 872,Iuliu Ha?ieganu University of Medicine and Pharmacy Cluj-Napoca,Romania,"7,635",7.8,33%,65:35:00
 873,Jadavpur University,India,"12,641",21.2,1%,32 : 68
-874,University of Ja®¶n,Spain,"14,364",17.2,8%,56:44:00
+874,University of Ja√©n,Spain,"14,364",17.2,8%,56:44:00
 875,Jamia Hamdard University,India,"6,827",13.9,6%,55:45:00
 876,Jiangsu University,China,"36,125",9.6,6%,42:58:00
 877,Jilin University,China,"71,593",10.8,3%,45:55:00
 878,University of Jordan,Jordan,"31,495",17,16%,68:32:00
 879,Juntendo University,Japan,"4,953",4.1,2%,53:47:00
 880,Kaohsiung Medical University,Taiwan,"6,802",12.1,7%,57:43:00
-881,Karab®πk University,Turkey,"47,464",45.9,17%,41:59:00
+881,Karab√ºk University,Turkey,"47,464",45.9,17%,41:59:00
 882,Karlstad University,Sweden,"8,727",13,%,63:37:00
 883,Kent State University,United States,"23,764",17.6,7%,60:40:00
 884,Kerman University of Medical Sciences,Iran,"5,422",3.9,0%,63:37:00
 885,Kharkiv National University of Radio Electronics,Ukraine,"8,058",11.8,9%,0.888888889
 886,Kindai University,Japan,"33,614",14.1,2%,31 : 69
-887,King Mongkut°Øs University of Technology Thonburi,Thailand,"16,498",21.3,6%,47:53:00
+887,King Mongkut‚Äôs University of Technology Thonburi,Thailand,"16,498",21.3,6%,47:53:00
 888,King Saud bin Abdulaziz University for Health Sciences,Saudi Arabia,"12,238",7.3,0%,52:48:00
 889,Kingston University,United Kingdom,"14,285",18.3,37%,58:42:00
 890,K.N. Toosi University of Technology,Iran,"6,866",22.6,1%,34 : 66
@@ -899,7 +899,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 898,University of Leoben,Austria,"2,635",5,14%,1.011805556
 899,University of Ljubljana,Slovenia,"38,762",13.9,6%,60:40:00
 900,Louisiana Tech University,United States,"10,602",25.4,4%,44:56:00
-901,"Lumi®®re University, Lyon 2",France,"24,414",49.9,17%,67:33:00
+901,"Lumi√®re University, Lyon 2",France,"24,414",49.9,17%,67:33:00
 902,Marquette University,United States,"10,650",11.9,4%,55:45:00
 903,Medical University of Warsaw,Poland,"9,727",6.3,8%,74:26:00
 904,University of Memphis,United States,"16,460",14.2,3%,59:41:00
@@ -944,7 +944,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 943,Rochester Institute of Technology,United States,"14,093",15.7,17%,35 : 65
 944,University of Roehampton,United Kingdom,"7,825",15.3,28%,70:30:00
 945,RUDN University,Russian Federation,"20,455",12.8,31%,52:48:00
-946,Universit®¶ Saint-Joseph de Beyrouth,Lebanon,"7,748",20,5%,64:36:00
+946,Universit√© Saint-Joseph de Beyrouth,Lebanon,"7,748",20,5%,64:36:00
 947,University of Salamanca,Spain,"28,709",17.5,16%,58:42:00
 948,University of Salford,United Kingdom,"16,793",18.4,20%,54:46:00
 949,University of Santiago de Compostela,Spain,"24,968",14.9,9%,61:39:00
@@ -960,7 +960,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 959,Sidi Mohamed Ben Abdellah University,Morocco,"87,278",57.1,2%,47:53:00
 960,Sogang University,South Korea,"9,749",23.8,11%,45:55:00
 961,Sohag University,Egypt,"55,753",28.3,0%,59:41:00
-962,University of South Bohemia in ?esk®¶ Bud®ßjovice,Czech Republic,"9,143",14.4,5%,70:30:00
+962,University of South Bohemia in ?esk√© Budƒõjovice,Czech Republic,"9,143",14.4,5%,70:30:00
 963,South China Normal University,China,"31,465",15.7,3%,n/a
 964,University of South Dakota,United States,"7,282",15.8,3%,n/a
 965,Southern Illinois University Carbondale,United States,"11,158",14.9,8%,48:52:00
@@ -972,7 +972,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 971,Tallinn University of Technology,Estonia,"9,437",13.4,14%,43:57:00
 972,Technical University of Madrid,Spain,"37,683",13.1,15%,32 : 68
 973,Technological University Dublin,Ireland,"19,300",18.4,18%,43:57:00
-974,University of Technology of Compi®®gne,France,"4,308",16,24%,37 : 63
+974,University of Technology of Compi√®gne,France,"4,308",16,24%,37 : 63
 975,University of Technology of Troyes,France,"3,087",19.3,24%,0.970833333
 976,Teesside University,United Kingdom,"12,258",19.1,11%,58:42:00
 977,Universiti Tenaga Nasional (UNITEN),Malaysia,"5,736",13.5,9%,38 : 62
@@ -1003,8 +1003,8 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1002,Acharya Nagarjuna University,India,"4,816",10.3,7%,37 : 63
 1003,Ac?badem University,Turkey,"2,608",4.7,2%,75:25:00
 1004,University of A Coru?a,Spain,"14,815",12.4,4%,52:48:00
-1005,"Adam Mickiewicz University, Pozna®Ω",Poland,"34,534",13.2,3%,69:31:00
-1006,Adolfo Ib®¢?ez University,Chile,"10,385",28.8,5%,38 : 62
+1005,"Adam Mickiewicz University, Pozna≈Ñ",Poland,"34,534",13.2,3%,69:31:00
+1006,Adolfo Ib√°?ez University,Chile,"10,385",28.8,5%,38 : 62
 1007,AGH University of Science and Technology,Poland,"24,949",13.2,3%,34 : 66
 1008,Aichi Medical University,Japan,"1,291",2.7,1%,59:41:00
 1009,Ain Shams University,Egypt,"202,325",17.6,2%,49:51:00
@@ -1016,14 +1016,14 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1015,Alexandru Ioan Cuza University,Romania,"23,919",19.6,6%,63:37:00
 1016,Al-Farabi Kazakh National University,Kazakhstan,"22,116",4.6,17%,56:44:00
 1017,University of Alicante,Spain,"24,543",16.1,8%,58:42:00
-1018,University of Almer®™a,Spain,"13,067",17.7,12%,56:44:00
+1018,University of Almer√≠a,Spain,"13,067",17.7,12%,56:44:00
 1019,Alzahra University,Iran,"9,616",22.6,1%,100:00:00
 1020,Amity University,India,"31,103",15.4,5%,46:54:00
 1021,Anadolu University,Turkey,"513,690",339.1,0%,43:57:00
 1022,"University of the Andes, Chile",Chile,"8,734",15.1,2%,59:41:00
 1023,"University of the Andes, Venezuela",Venezuela,"31,841",12.4,2%,60:40:00
 1024,Andhra University,India,"8,869",13.9,5%,49:51:00
-1025,Andr®¶s Bello University (UNAB),Chile,"41,098",19.1,2%,52:48:00
+1025,Andr√©s Bello University (UNAB),Chile,"41,098",19.1,2%,52:48:00
 1026,Ankara University,Turkey,"76,364",18.5,5%,45:55:00
 1027,Anna University,India,"14,966",15.2,1%,45:55:00
 1028,Annamalai University,India,"19,490",12.8,2%,49:51:00
@@ -1032,17 +1032,17 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1031,Arak University,Iran,"6,369",21.4,0%,57:43:00
 1032,Ariel University,Israel,"11,250",28.3,0%,49:51:00
 1033,Assiut University,Egypt,"96,833",21.3,1%,54:46:00
-1034,Atat®πrk University,Turkey,"58,588",33.6,2%,49:51:00
+1034,Atat√ºrk University,Turkey,"58,588",33.6,2%,49:51:00
 1035,At?l?m University,Turkey,"9,385",14.1,5%,41:59:00
 1036,Austral University of Chile,Chile,"16,392",17.8,2%,51:49:00
 1037,Autonomous University of Baja California,Mexico,"64,427",20,2%,53:47:00
 1038,Autonomous University of Hidalgo State (UAEH),Mexico,"36,143",18.2,1%,57:43:00
-1039,Autonomous University of Nuevo Le®Æn,Mexico,"117,108",40.7,1%,49:51:00
+1039,Autonomous University of Nuevo Le√≥n,Mexico,"117,108",40.7,1%,49:51:00
 1040,Autonomous University of Puebla,Mexico,"79,778",40.2,0%,53:47:00
-1041,Autonomous University of Quer®¶taro,Mexico,"22,411",39.7,1%,56:44:00
+1041,Autonomous University of Quer√©taro,Mexico,"22,411",39.7,1%,56:44:00
 1042,Autonomous University of San Luis Potosi,Mexico,"31,551",8.9,0%,52:48:00
 1043,Autonomous University of the State of Mexico,Mexico,"58,936",21.3,0%,58:42:00
-1044,Autonomous University of Yucat®¢n,Mexico,"17,119",14.8,0%,50:50:00
+1044,Autonomous University of Yucat√°n,Mexico,"17,119",14.8,0%,50:50:00
 1045,Babe?-Bolyai University,Romania,"38,974",25.8,5%,65:35:00
 1046,University of Baghdad,Iraq,"70,590",11.2,0%,58:42:00
 1047,Bahauddin Zakariya University,Pakistan,"28,987",34.9,0%,43:57:00
@@ -1055,11 +1055,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1054,University of Basrah,Iraq,"32,479",13.4,0%,52:48:00
 1055,Beijing Forestry University,China,"19,353",16.3,2%,55:45:00
 1056,Beijing University of Technology,China,"21,899",11.8,3%,43:57:00
-1057,University of B®¶ja?a,Algeria,"43,062",25.4,1%,58:42:00
+1057,University of B√©ja?a,Algeria,"43,062",25.4,1%,58:42:00
 1058,Belarusian State University,Belarus,"24,451",7.8,10%,61:39:00
 1059,Belgorod State National Research University,Russian Federation,"12,994",14.3,18%,64:36:00
 1060,Bezmialem Vakif University,Turkey,"3,521",12.4,5%,73:27:00
-1061,University of B®™o-B®™o,Chile,"13,085",25.5,1%,42:58:00
+1061,University of B√≠o-B√≠o,Chile,"13,085",25.5,1%,42:58:00
 1062,University of Birjand,Iran,"12,055",26.2,1%,53:47:00
 1063,"Birla Institute of Technology and Science, Pilani",India,"14,788",18.1,1%,0.888888889
 1064,University of Biskra,Algeria,"32,650",23.6,1%,n/a
@@ -1082,9 +1082,9 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1081,University of Castilla-La Mancha,Spain,"23,198",13.6,7%,56:44:00
 1082,The Catholic University of Korea,South Korea,"9,762",7.2,3%,59:41:00
 1083,Catholic University of the North,Chile,"11,567",20,2%,46:54:00
-1084,Universidad Cat®Ælica San Antonio de Murcia (UCAM),Spain,"12,621",6.7,10%,56:44:00
+1084,Universidad Cat√≥lica San Antonio de Murcia (UCAM),Spain,"12,621",6.7,10%,56:44:00
 1085,University of Caxias do Sul,Brazil,"15,400",23.5,0%,53:47:00
-1086,Cear®¢ State University,Brazil,"20,106",17.6,0%,61:39:00
+1086,Cear√° State University,Brazil,"20,106",17.6,0%,61:39:00
 1087,Central University of Finance and Economics,China,"15,859",14.1,3%,62:38:00
 1088,Chaoyang University of Technology,Taiwan,"16,173",41.3,6%,55:45:00
 1089,"University of Chemistry and Technology, Prague",Czech Republic,"4,159",9.2,22%,61:39:00
@@ -1100,7 +1100,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1099,Cochin University of Science and Technology,India,"8,463",19.3,0%,39 : 61
 1100,University of Colombo,Sri Lanka,"29,197",35.6,0%,56:44:00
 1101,Comenius University in Bratislava,Slovakia,"21,141",9.9,13%,66:34:00
-1102,University of Concepci®Æn,Chile,"28,176",17.2,2%,52:48:00
+1102,University of Concepci√≥n,Chile,"28,176",17.2,2%,52:48:00
 1103,University of Constantine 1,Algeria,"35,321",21,1%,57:43:00
 1104,Corvinus University of Budapest,Hungary,"11,232",24.9,16%,53:47:00
 1105,Cracow University of Technology,Poland,"13,079",12.1,2%,38 : 62
@@ -1113,7 +1113,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1112,University of Dhaka,Bangladesh,"210,856",16.9,3%,47:53:00
 1113,Diponegoro University,Indonesia,"38,420",15.6,2%,56:44:00
 1114,Dokkyo Medical University,Japan,"1,344",1.3,1%,53:47:00
-1115,Dokuz Eyl®πl University,Turkey,"61,620",18.8,2%,47:53:00
+1115,Dokuz Eyl√ºl University,Turkey,"61,620",18.8,2%,47:53:00
 1116,Doshisha University,Japan,"28,272",18.7,4%,41:59:00
 1117,Dunarea de Jos University of Galati,Romania,"12,383",16.8,22%,58:42:00
 1118,Duzce University,Turkey,"28,346",25.7,2%,42:58:00
@@ -1131,29 +1131,29 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1130,Federal University of ABC (UFABC),Brazil,"15,580",21.2,1%,35 : 65
 1131,Federal University of Alagoas,Brazil,"30,196",18.4,0%,n/a
 1132,Federal University of Bahia,Brazil,"45,148",18.1,0%,44:56:00
-1133,Federal University of Cear®¢ (UFC),Brazil,"36,345",16.3,1%,45:55:00
-1134,Federal University of Esp®™rito Santo,Brazil,"24,617",12.8,1%,56:44:00
-1135,Federal University of Goi®¢s,Brazil,"34,803",13.1,0%,51:49:00
+1133,Federal University of Cear√° (UFC),Brazil,"36,345",16.3,1%,45:55:00
+1134,Federal University of Esp√≠rito Santo,Brazil,"24,617",12.8,1%,56:44:00
+1135,Federal University of Goi√°s,Brazil,"34,803",13.1,0%,51:49:00
 1136,Federal University of Health Sciences of Porto Alegre (UFCSPA) ,Brazil,"6,047",16.8,10%,67:33:00
-1137,Federal University of Itajub®¢,Brazil,"8,286",15.9,1%,29 : 71
+1137,Federal University of Itajub√°,Brazil,"8,286",15.9,1%,29 : 71
 1138,Federal University of Juiz de Fora (UFJF),Brazil,"28,458",18.3,0%,42:58:00
 1139,Federal University of Lavras,Brazil,"14,546",18.4,1%,49:51:00
 1140,Federal University of Maranh?o (UFMA),Brazil,"29,443",14.3,0%,49:51:00
 1141,Federal University of Mato Grosso do Sul,Brazil,"27,263",17.3,1%,53:47:00
 1142,Federal University of Ouro Preto,Brazil,"13,936",16,1%,52:48:00
-1143,Federal University of Par®¢,Brazil,"43,681",16.3,0%,53:47:00
-1144,Federal University of Para®™-ba (UFPB),Brazil,"30,829",11.9,0%,51:49:00
-1145,Federal University of Paran®¢ (UFPR),Brazil,"32,860",13.3,0%,51:49:00
+1143,Federal University of Par√°,Brazil,"43,681",16.3,0%,53:47:00
+1144,Federal University of Para√≠-ba (UFPB),Brazil,"30,829",11.9,0%,51:49:00
+1145,Federal University of Paran√° (UFPR),Brazil,"32,860",13.3,0%,51:49:00
 1146,Federal University of Pernambuco,Brazil,"40,131",17.4,1%,49:51:00
-1147,Federal University of Piau®™,Brazil,"30,467",15.5,0%,54:46:00
+1147,Federal University of Piau√≠,Brazil,"30,467",15.5,0%,54:46:00
 1148,Federal University of Rio Grande do Norte (UFRN),Brazil,"40,206",18.6,0%,45:55:00
 1149,Federal Rural University of the Semi-Arid Region,Brazil,"8,007",11.7,0%,42:58:00
 1150,Federal University of Santa Maria,Brazil,"27,667",13.8,1%,53:47:00
 1151,Federal University of S?o Carlos,Brazil,"19,404",15.1,2%,48:52:00
-1152,Federal University of Technology ®C Paran®¢,Brazil,"31,943",12.7,1%,35 : 65
+1152,Federal University of Technology ‚Äì Paran√°,Brazil,"31,943",12.7,1%,35 : 65
 1153,Federal University of Uberlandia,Brazil,"29,867",15.8,1%,52:48:00
 1154,Federal University of Vi?osa,Brazil,"15,347",12.3,1%,49:51:00
-1155,Federico Santa Mar®™a Technical University,Chile,"19,430",24.7,4%,25 : 75
+1155,Federico Santa Mar√≠a Technical University,Chile,"19,430",24.7,4%,25 : 75
 1156,Feng Chia University,Taiwan,"19,790",23.2,8%,37 : 63
 1157,Ferdowsi University of Mashhad,Iran,"24,186",29.9,5%,56:44:00
 1158,Fluminense Federal University,Brazil,"54,134",15.3,1%,45:55:00
@@ -1163,8 +1163,8 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1162,Universitas Gadjah Mada,Indonesia,"38,092",7.9,6%,53:47:00
 1163,Gazi University,Turkey,"43,518",25.6,2%,49:51:00
 1164,Gaziantep University,Turkey,"30,713",27.6,12%,47:53:00
-1165,University of Gda®Ωsk,Poland,"24,302",17.4,2%,69:31:00
-1166,Gda®Ωsk University of Technology,Poland,"15,540",13.9,5%,40 : 60
+1165,University of Gda≈Ñsk,Poland,"24,302",17.4,2%,69:31:00
+1166,Gda≈Ñsk University of Technology,Poland,"15,540",13.9,5%,40 : 60
 1167,Gebze Technical University,Turkey,"7,492",23.7,2%,37 : 63
 1168,"George Emil Palade University of Medicine, Pharmacy, Science, and Technology of Targu Mures",Romania,"10,629",20.3,8%,53:47:00
 1169,University of Ghana,Ghana,"39,872",25.4,1%,46:54:00
@@ -1184,11 +1184,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1183,Hamamatsu University School of Medicine,Japan,"1,208",3.8,1%,49:51:00
 1184,Hanoi University of Science and Technology,Vietnam,"30,893",20.6,1%,26 : 74
 1185,Hashemite University,Jordan,"16,987",18.8,6%,62:38:00
-1186,Universit®¶ Hassan II de Casablanca,Morocco,"117,685",35.3,2%,53:47:00
+1186,Universit√© Hassan II de Casablanca,Morocco,"117,685",35.3,2%,53:47:00
 1187,University of Havana,Cuba,"16,058",10.6,6%,60:40:00
 1188,Helwan University,Egypt,"114,062",22.1,1%,52:48:00
 1189,Hosei University,Japan,"30,662",40.8,3%,38 : 62
-1190,University of Hradec Kr®¢lov®¶,Czech Republic,"6,245",13.3,5%,66:34:00
+1190,University of Hradec Kr√°lov√©,Czech Republic,"6,245",13.3,5%,66:34:00
 1191,Huaqiao University,China,"30,890",17.4,12%,51:49:00
 1192,University of Hyogo,Japan,"6,570",12.9,3%,41:59:00
 1193,Ibaraki University,Japan,"7,975",14.5,3%,36 : 64
@@ -1208,7 +1208,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1207,Iwate University,Japan,"5,436",14,3%,37 : 63
 1208,Izmir Institute of Technology,Turkey,"5,328",19.5,3%,46:54:00
 1209,James Madison University,United States,"21,315",17.9,2%,60:40:00
-1210,Jan Evangelista Purkyn®ß University,Czech Republic,"7,438",17.7,3%,69:31:00
+1210,Jan Evangelista Purkynƒõ University,Czech Republic,"7,438",17.7,3%,69:31:00
 1211,Jawaharlal Nehru Technological University Anantapur (JNTUA),India,"5,402",15.2,0%,42:58:00
 1212,Jeju National University,South Korea,"12,189",19.1,5%,52:48:00
 1213,Jeonbuk National University,South Korea,"20,555",20.4,6%,45:55:00
@@ -1228,7 +1228,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1227,Khon Kaen University,Thailand,"33,738",17.4,2%,62:38:00
 1228,KIIT University,India,"21,668",12.7,3%,48:52:00
 1229,King Faisal University,Saudi Arabia,"79,232",37,1%,43:57:00
-1230,King Mongkut°Øs Institute of Technology Ladkrabang,Thailand,"25,154",22.6,1%,52:48:00
+1230,King Mongkut‚Äôs Institute of Technology Ladkrabang,Thailand,"25,154",22.6,1%,52:48:00
 1231,King Mongkut's University of Technology North Bangkok,Thailand,"27,177",24.4,0%,43:57:00
 1232,Kitasato University,Japan,"8,561",5.4,0%,53:47:00
 1233,KL University,India,"16,930",14.8,2%,33 : 67
@@ -1246,11 +1246,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1245,Kyushu Institute of Technology (Kyutech),Japan,"5,649",16.2,5%,0.602083333
 1246,Latvia University of Life Sciences and Technologies,Latvia,"3,880",39.9,2%,50:50:00
 1247,Lebanese University,Lebanon,"49,737",15.5,16%,70:30:00
-1248,University of Le®Æn,Spain,"12,803",15.8,16%,52:48:00
+1248,University of Le√≥n,Spain,"12,803",15.8,16%,52:48:00
 1249,University of Lethbridge,Canada,"6,990",12.7,11%,n/a
 1250,L.N. Gumilyov Eurasian National University,Kazakhstan,"18,985",6.7,4%,n/a
 1251,Lobachevsky State University of Nizhni Novgorod,Russian Federation,"17,310",7.2,10%,53:47:00
-1252,University of ?®Æd?,Poland,"25,026",12.3,10%,62:38:00
+1252,University of ?√≥d?,Poland,"25,026",12.3,10%,62:38:00
 1253,Lodz University of Technology,Poland,"15,442",12.8,4%,40 : 60
 1254,London South Bank University,United Kingdom,"11,560",15.7,33%,57:43:00
 1255,Londrina State University,Brazil,"26,470",15.3,1%,58:42:00
@@ -1271,8 +1271,8 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1270,Meijo University,Japan,"15,437",31.8,1%,30 : 70
 1271,Mendel University in Brno,Czech Republic,"8,459",17.7,19%,58:42:00
 1272,Menoufia University,Egypt,"94,466",36.6,1%,45:55:00
-1273,M'Hamed Bougara University of Boumerd®®s,Algeria,"31,889",21.6,1%,58:42:00
-1274,Michoac®¢n University of San Nicol®¢s of Hidalgo,Mexico,"39,861",28.7,1%,53:47:00
+1273,M'Hamed Bougara University of Boumerd√®s,Algeria,"31,889",21.6,1%,58:42:00
+1274,Michoac√°n University of San Nicol√°s of Hidalgo,Mexico,"39,861",28.7,1%,53:47:00
 1275,Mie University,Japan,"7,247",8.6,4%,38 : 62
 1276,Ming Chuan University,Taiwan,"18,423",22.4,9%,60:40:00
 1277,Minia University,Egypt,"72,328",18.5,1%,59:41:00
@@ -1305,7 +1305,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1304,National Chung Cheng University,Taiwan,"10,195",15.1,5%,45:55:00
 1305,National Chung Hsing University,Taiwan,"15,184",16.6,7%,38 : 62
 1306,National University of Colombia,Colombia,"52,166",22,1%,38 : 62
-1307,National University of C®Ærdoba,Argentina,"80,219",12.9,2%,62:38:00
+1307,National University of C√≥rdoba,Argentina,"80,219",12.9,2%,62:38:00
 1308,National University of Cuyo,Argentina,"38,253",7.9,3%,74:26:00
 1309,National Ilan University,Taiwan,"5,470",23.3,3%,34 : 66
 1310,"National Institute of Technology, Tiruchirappalli",India,"5,848",17.3,8%,24 : 76
@@ -1313,13 +1313,13 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1312,National Polytechnic University (IPN),Mexico,"180,801",11,0%,39 : 61
 1313,National Research University of Electronic Technology (MIET),Russian Federation,"4,306",8.7,5%,28 : 72
 1314,National Research Saratov State University,Russian Federation,"9,782",9.2,8%,60:40:00
-1315,National University of San Mart®™n,Argentina,"15,841",15.8,5%,65:35:00
+1315,National University of San Mart√≠n,Argentina,"15,841",15.8,5%,65:35:00
 1316,National Taipei University,Taiwan,"8,636",16.5,4%,54:46:00
 1317,National Taiwan Ocean University,Taiwan,"8,655",21.5,9%,32 : 68
 1318,National Technical University Kharkiv Polytechnic Institute,Ukraine,"12,141",8,9%,31 : 69
-1319,National Technical University of Ukraine ®C Igor Sikorsky Kyiv Polytechnic Institute,Ukraine,"21,072",10.4,3%,39 : 61
+1319,National Technical University of Ukraine ‚Äì Igor Sikorsky Kyiv Polytechnic Institute,Ukraine,"21,072",10.4,3%,39 : 61
 1320,National Yunlin University of Science and Technology,Taiwan,"9,200",25.2,5%,42:58:00
-1321,Nicolaus Copernicus University in Toru®Ω,Poland,"21,990",11.3,3%,69:31:00
+1321,Nicolaus Copernicus University in Toru≈Ñ,Poland,"21,990",11.3,3%,69:31:00
 1322,University of Nigeria Nsukka,Nigeria,"42,785",14.6,1%,49:51:00
 1323,Slovak University of Agriculture in Nitra,Slovakia,"5,707",12.8,3%,54:46:00
 1324,University of North Carolina Wilmington,United States,"14,865",18.8,2%,62:38:00
@@ -1344,7 +1344,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1343,University of Pardubice,Czech Republic,"6,961",13.1,8%,55:45:00
 1344,Paris Nanterre University,France,"32,742",35.6,17%,62:38:00
 1345,University of Patras,Greece,"25,636",27.3,5%,44:56:00
-1346,Pavol Jozef ?af®¢rik University in Ko?ice,Slovakia,"6,802",10.1,22%,65:35:00
+1346,Pavol Jozef ?af√°rik University in Ko?ice,Slovakia,"6,802",10.1,22%,65:35:00
 1347,Perm National Research Polytechnic University,Russian Federation,"8,257",9.8,9%,38 : 62
 1348,Perm State University,Russian Federation,"9,273",10.9,2%,62:38:00
 1349,Pirogov Russian National Research Medical University,Russian Federation,"8,225",6.3,6%,72:28:00
@@ -1353,11 +1353,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1352,Polytechnic University of Bucharest,Romania,"29,699",23.1,3%,36 : 64
 1353,Polytechnic University of Timi?oara,Romania,"12,762",20.6,2%,36 : 64
 1354,Pondicherry University,India,"6,940",20.1,1%,41:59:00
-1355,Pontifical Bolivarian University (UPB) ®C Medell®™n,Colombia,"15,400",14,2%,54:46:00
+1355,Pontifical Bolivarian University (UPB) ‚Äì Medell√≠n,Colombia,"15,400",14,2%,54:46:00
 1356,Pontifical Catholic University of Minas Gerais,Brazil,"65,117",39.5,0%,53:47:00
-1357,Pontifical Catholic University of Paran®¢,Brazil,"16,353",18.1,1%,53:47:00
+1357,Pontifical Catholic University of Paran√°,Brazil,"16,353",18.1,1%,53:47:00
 1358,Pontifical Catholic University of Peru,Peru,"25,807",7.4,2%,47:53:00
-1359,Pontifical Catholic University of Valpara®™so,Chile,"16,511",24.1,1%,42:58:00
+1359,Pontifical Catholic University of Valpara√≠so,Chile,"16,511",24.1,1%,42:58:00
 1360,Port Said University,Egypt,"22,163",27.7,0%,47:53:00
 1361,Prince of Songkla University,Thailand,"37,788",15.6,2%,70:30:00
 1362,PSG College of Technology,India,"8,563",13.8,0%,38 : 62
@@ -1381,7 +1381,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1380,Sakarya University,Turkey,"51,273",31.7,5%,45:55:00
 1381,Samara University,Russian Federation,"9,806",10.5,13%,50:50:00
 1382,Samara State Technical University,Russian Federation,"14,126",15.8,3%,38 : 62
-1383,San Sebasti®¢n University,Chile,"17,617",9.2,0%,61:39:00
+1383,San Sebasti√°n University,Chile,"17,617",9.2,0%,61:39:00
 1384,Santa Catarina State University,Brazil,"13,414",12.8,1%,52:48:00
 1385,"University of Santiago, Chile (USACH)",Chile,"23,469",25.4,3%,43:57:00
 1386,Sapporo Medical University,Japan,"1,305",3.3,0%,43:57:00
@@ -1413,11 +1413,11 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1412,University of Shizuoka,Japan,"3,099",11.6,3%,61:39:00
 1413,Showa University,Japan,"3,724",2,0%,59:41:00
 1414,Siberian Federal University,Russian Federation,"10,972",19.1,8%,36 : 64
-1415,Siksha °ÆO°Ø Anusandhan,India,"12,143",9.7,0%,50:50:00
+1415,Siksha ‚ÄòO‚Äô Anusandhan,India,"12,143",9.7,0%,50:50:00
 1416,University of Silesia in Katowice,Poland,"24,535",13.3,3%,66:34:00
 1417,Silesian University of Technology,Poland,"17,892",11.9,2%,34 : 66
 1418,Silpakorn University,Thailand,"24,138",21.3,1%,69:31:00
-1419,Sim®Æn Bol®™var University,Venezuela,"8,373",23.6,0%,46:54:00
+1419,Sim√≥n Bol√≠var University,Venezuela,"8,373",23.6,0%,46:54:00
 1420,University of Sistan and Baluchestan,Iran,"24,331",52.8,0%,50:50:00
 1421,Slovak University of Technology in Bratislava,Slovakia,"11,194",11.3,4%,32 : 68
 1422,Sofia University,Bulgaria,"21,735",7.1,6%,67:33:00
@@ -1435,20 +1435,20 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1434,Srinakharinwirot University,Thailand,"22,649",17.2,0%,72:28:00
 1435,SRM Institute of Science and Technology,India,"51,528",15.6,2%,1.011805556
 1436,Staffordshire University,United Kingdom,"8,733",15.4,11%,49:51:00
-1437,State University of Maring®¢,Brazil,"22,727",12.1,1%,57:43:00
+1437,State University of Maring√°,Brazil,"22,727",12.1,1%,57:43:00
 1438,State University of Ponta Grossa,Brazil,"8,549",8.8,0%,54:46:00
 1439,State University of Santa Cruz,Brazil,"6,718",8.6,1%,61:39:00
 1440,St Marianna University School of Medicine,Japan,848,0.9,1%,35 : 65
 1441,St Petersburg Electrotechnical University (LETI),Russian Federation,"8,227",12.9,19%,30 : 70
-1442,S®πleyman Demirel University,Turkey,"37,150",41.1,3%,50:50:00
+1442,S√ºleyman Demirel University,Turkey,"37,150",41.1,3%,50:50:00
 1443,Suranaree University of Technology,Thailand,"14,329",30.9,1%,55:45:00
 1444,SWPS University of Social Sciences and Humanities,Poland,"13,561",35.3,9%,74:26:00
-1445,Szent Istv®¢n University,Hungary,"13,198",17.9,11%,48:52:00
+1445,Szent Istv√°n University,Hungary,"13,198",17.9,11%,48:52:00
 1446,University of Talca,Chile,"11,310",15.7,1%,51:49:00
 1447,Tamil Nadu Agricultural University,India,"6,393",8.5,0%,65:35:00
 1448,Tamkang University,Taiwan,"25,343",24.5,8%,48:52:00
 1449,Tanta University,Egypt,"115,169",21.8,1%,42:58:00
-1450,University of Tarapac®¢,Chile,"8,703",27.4,2%,54:46:00
+1450,University of Tarapac√°,Chile,"8,703",27.4,2%,54:46:00
 1451,Taras Shevchenko National University of Kyiv,Ukraine,"23,687",8.9,4%,58:42:00
 1452,Technical University of Cluj-Napoca,Romania,"19,136",19.4,2%,36 : 64
 1453,Technical University of Ko?ice,Slovakia,"9,110",12,13%,28 : 72
@@ -1473,14 +1473,14 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1472,Tokyo Denki University,Japan,"9,262",25,2%,0.602083333
 1473,Tokyo University of Marine Science and Technology,Japan,"2,641",10.7,8%,34 : 66
 1474,Tokyo University of Science,Japan,"18,578",24.8,2%,24 : 76
-1475,Tomas Bata University in Zl®™n,Czech Republic,"8,389",18.8,11%,58:42:00
+1475,Tomas Bata University in Zl√≠n,Czech Republic,"8,389",18.8,11%,58:42:00
 1476,Tomsk State University of Control Systems and Radioelectronics,Russian Federation,"6,409",15.2,17%,36 : 64
 1477,Tottori University,Japan,"6,040",7.6,2%,37 : 63
 1478,University of Toyama,Japan,"9,120",12,4%,40 : 60
 1479,Toyo University,Japan,"31,588",26.5,6%,42:58:00
 1480,Toyohashi University of Technology (TUT),Japan,"2,059",8.8,9%,0.479166667
 1481,Transilvania University of Bra?ov,Romania,"19,123",21.5,1%,52:48:00
-1482,University of Tr®¢s-os-Montes and Alto Douro,Portugal,"6,515",11.4,4%,56:44:00
+1482,University of Tr√°s-os-Montes and Alto Douro,Portugal,"6,515",11.4,4%,56:44:00
 1483,Tshwane University of Technology,South Africa,"40,869",35.2,3%,56:44:00
 1484,Tunghai University,Taiwan,"16,080",22.6,7%,54:46:00
 1485,University of Tunis El Manar,Tunisia,"30,817",8.9,2%,67:33:00
@@ -1492,7 +1492,7 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1491,Urmia University,Iran,"14,834",30.5,0%,50:50:00
 1492,Utsunomiya University,Japan,"4,847",13.4,4%,37 : 63
 1493,University of Valladolid,Spain,"22,420",11.9,7%,53:47:00
-1494,University of Valpara®™so,Chile,"16,682",18.8,4%,58:42:00
+1494,University of Valpara√≠so,Chile,"16,682",18.8,4%,58:42:00
 1495,"University of Veterinary and Animal Sciences, Lahore",Pakistan,"6,578",31.3,0%,48:52:00
 1496,Vietnam National University (Ho Chi Minh City),Vietnam,"61,531",21.1,1%,44:56:00
 1497,"Visvesvaraya National Institute of Technology, Nagpur",India,"4,303",17.2,3%,25 : 75
@@ -1500,12 +1500,12 @@ ranking,title,location,number students,students staff ratio,perc intl students,g
 1499,Voronezh State University,Russian Federation,"16,823",12,16%,55:45:00
 1500,VSB - Technical University of Ostrava,Czech Republic,"11,845",13.9,13%,35 : 65
 1501,Vytautas Magnus University,Lithuania,"8,269",14.6,15%,68:32:00
-1502,Warsaw University of Life Sciences ®C SGGW,Poland,"16,838",13.2,5%,59:41:00
+1502,Warsaw University of Life Sciences ‚Äì SGGW,Poland,"16,838",13.2,5%,59:41:00
 1503,Warsaw University of Technology,Poland,"24,376",10.9,6%,35 : 65
 1504,Wenzhou Medical University,China,"16,757",11.8,5%,62:38:00
 1505,University of West Bohemia,Czech Republic,"11,730",15.9,4%,54:46:00
 1506,Western Michigan University,United States,"19,273",21.8,7%,52:48:00
-1507,Western Paran®¢ State University (Unioeste),Brazil,"11,935",9.2,0%,52:48:00
+1507,Western Paran√° State University (Unioeste),Brazil,"11,935",9.2,0%,52:48:00
 1508,West University of Timi?oara,Romania,"14,027",19.5,5%,64:36:00
 1509,Wroc?aw University of Environmental and Life Sciences,Poland,"8,540",12.2,6%,68:32:00
 1510,Wroc?aw University of Science and Technology,Poland,"26,064",30.9,4%,34 : 66
