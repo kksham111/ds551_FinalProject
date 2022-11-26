@@ -32,7 +32,7 @@ def main():
        
             while previousNode != 0:
                 #get the parent directory
-                previousNodeData = json.loads(requests.get(baseURL+'/Metadata.json?orderBy="id"&equalTo=1').text)
+                previousNodeData = json.loads(requests.get(baseURL+'/Metadata.json?orderBy="id"&equalTo='+str(previousNode)).text)
                 #update the previousNode
                 directoryName = list(previousNodeData.keys())[0]
                 previousNode = previousNodeData[directoryName]['previousNode']

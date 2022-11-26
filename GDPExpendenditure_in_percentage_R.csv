@@ -1,0 +1,248 @@
+,Country,Year,% of GDP,Location_Initials
+0,Albania,2020.0,3.1,A
+1,Algeria,2019.0,6.1,A
+2,American Samoa,2006.0,14.7,A
+3,Andorra,2021.0,2.9,A
+4,Angola,2020.0,2.4,A
+5,Antigua and Barbuda,2021.0,3.8,A
+6,Argentina,2019.0,4.7,A
+7,Armenia,2020.0,2.7,A
+8,Aruba,2016.0,5.5,A
+9,Australia,2018.0,5.1,A
+10,Austria,2018.0,5.2,A
+11,Azerbaijan,2019.0,2.7,A
+12,"Bahamas, The",2021.0,2.8,B
+13,Bahrain,2020.0,2.2,B
+14,Bangladesh,2019.0,1.3,B
+15,Barbados,2021.0,6.5,B
+16,Belarus,2020.0,5.0,B
+17,Belgium,2018.0,6.4,B
+18,Belize,2021.0,8.7,B
+19,Benin,2020.0,3.0,B
+20,Bermuda,2017.0,1.3,B
+21,Bhutan,2019.0,5.7,B
+22,Bolivia,2018.0,8.9,B
+23,Bosnia and Herzegovina,,,B
+24,Botswana,2020.0,8.7,B
+25,Brazil,2018.0,6.1,B
+26,British Virgin Islands,2020.0,2.6,B
+27,Brunei Darussalam,2016.0,4.4,B
+28,Bulgaria,2017.0,4.1,B
+29,Burkina Faso,2020.0,5.5,B
+30,Burundi,2020.0,5.0,B
+31,Cabo Verde,2020.0,7.6,C
+32,Cambodia,2018.0,2.2,C
+33,Cameroon,2020.0,3.2,C
+34,Canada,2011.0,5.3,C
+35,Cayman Islands,,,C
+36,Central African Republic,2020.0,2.2,C
+37,Chad,2020.0,2.9,C
+38,Channel Islands,,,C
+39,Chile,2018.0,5.4,C
+40,China,2020.0,3.6,C
+41,Colombia,2020.0,4.9,C
+42,Comoros,2015.0,2.5,C
+43,"Congo, Dem. Rep.",2021.0,2.7,C
+44,"Congo, Rep.",2020.0,4.4,C
+45,Costa Rica,2020.0,6.7,C
+46,Cote d'Ivoire,2020.0,3.4,C
+47,Croatia,2018.0,3.9,C
+48,Cuba,2010.0,12.8,C
+49,Curacao,2013.0,4.9,C
+50,Cyprus,2017.0,5.7,C
+51,Czechia,2018.0,4.3,C
+52,Denmark,2018.0,6.8,D
+53,Djibouti,2018.0,3.6,D
+54,Dominica,2020.0,4.7,D
+55,Dominican Republic,2020.0,4.6,D
+56,Ecuador,2020.0,4.1,E
+57,"Egypt, Arab Rep.",2020.0,2.5,E
+58,El Salvador,2019.0,3.4,E
+59,Equatorial Guinea,1998.0,2.2,E
+60,Eritrea,2006.0,2.1,E
+61,Estonia,2018.0,5.3,E
+62,Eswatini,2021.0,5.0,E
+63,Ethiopia,2018.0,5.1,E
+64,Faroe Islands,2019.0,7.6,F
+65,Fiji,2019.0,5.1,F
+66,Finland,2018.0,6.3,F
+67,France,2018.0,5.4,F
+68,French Polynesia,,,F
+69,Gabon,2020.0,3.2,G
+70,"Gambia, The",2020.0,2.8,G
+71,Georgia,2020.0,3.9,G
+72,Germany,2018.0,5.0,G
+73,Ghana,2018.0,3.9,G
+74,Gibraltar,,,G
+75,Greece,2018.0,3.6,G
+76,Greenland,2018.0,10.6,G
+77,Grenada,2018.0,3.6,G
+78,Guam,,,G
+79,Guatemala,2020.0,3.3,G
+80,Guinea,2020.0,2.2,G
+81,Guinea-Bissau,2020.0,2.7,G
+82,Guyana,2018.0,4.5,G
+83,Haiti,2018.0,1.6,H
+84,Honduras,2020.0,6.4,H
+85,"Hong Kong SAR, China",2020.0,4.4,H
+86,Hungary,2018.0,4.6,H
+87,Iceland,2018.0,7.6,I
+88,India,2020.0,4.5,I
+89,Indonesia,2019.0,2.8,I
+90,"Iran, Islamic Rep.",2020.0,3.6,I
+91,Iraq,2016.0,4.7,I
+92,Ireland,2018.0,3.4,I
+93,Isle of Man,,,I
+94,Israel,2018.0,6.1,I
+95,Italy,2018.0,4.3,I
+96,Jamaica,2021.0,6.0,J
+97,Japan,2018.0,3.1,J
+98,Jordan,2019.0,3.0,J
+99,Kazakhstan,2019.0,2.9,K
+100,Kenya,2021.0,4.8,K
+101,Kiribati,2019.0,12.4,K
+102,"Korea, Dem. People's Rep.",,,K
+103,"Korea, Rep.",2018.0,4.5,K
+104,Kosovo,,,K
+105,Kuwait,2020.0,6.6,K
+106,Kyrgyz Republic,2019.0,5.4,K
+107,Lao PDR,2020.0,2.2,L
+108,Latvia,2018.0,4.2,L
+109,Lebanon,2019.0,2.6,L
+110,Lesotho,2021.0,8.7,L
+111,Liberia,2021.0,2.7,L
+112,Libya,1999.0,2.3,L
+113,Liechtenstein,2011.0,2.6,L
+114,Lithuania,2018.0,3.9,L
+115,Luxembourg,2018.0,3.6,L
+116,"Macao SAR, China",2020.0,6.3,M
+117,Madagascar,2020.0,3.1,M
+118,Malawi,2020.0,2.9,M
+119,Malaysia,2020.0,3.9,M
+120,Maldives,2019.0,4.1,M
+121,Mali,2020.0,3.8,M
+122,Malta,2017.0,4.7,M
+123,Marshall Islands,2019.0,15.8,M
+124,Mauritania,2020.0,1.9,M
+125,Mauritius,2020.0,4.6,M
+126,Mexico,2018.0,4.3,M
+127,"Micronesia, Fed. Sts.",2018.0,9.7,M
+128,Moldova,2020.0,6.4,M
+129,Monaco,2019.0,1.2,M
+130,Mongolia,2019.0,4.9,M
+131,Montenegro,,,M
+132,Morocco,2020.0,6.8,M
+133,Mozambique,2020.0,6.3,M
+134,Myanmar,2019.0,2.1,M
+135,Namibia,2021.0,9.6,N
+136,Nauru,2020.0,5.2,N
+137,Nepal,2020.0,4.4,N
+138,Netherlands,2018.0,5.4,N
+139,New Caledonia,,,N
+140,New Zealand,2018.0,6.0,N
+141,Nicaragua,2020.0,4.6,N
+142,Niger,2020.0,3.8,N
+143,Nigeria,1975.0,3.1,N
+144,North Macedonia,2002.0,3.3,N
+145,Northern Mariana Islands,,,N
+146,Norway,2018.0,7.6,N
+147,Oman,2019.0,5.4,O
+148,Pakistan,2019.0,2.5,P
+149,Palau,2019.0,6.8,P
+150,Panama,2020.0,3.9,P
+151,Papua New Guinea,2018.0,1.9,P
+152,Paraguay,2020.0,3.3,P
+153,Peru,2020.0,4.2,P
+154,Philippines,2020.0,3.9,P
+155,Poland,2018.0,4.6,P
+156,Portugal,2018.0,4.7,P
+157,Puerto Rico,2014.0,6.1,P
+158,Qatar,2020.0,3.2,Q
+159,Romania,2018.0,3.3,R
+160,Russian Federation,2018.0,4.7,R
+161,Rwanda,2021.0,3.8,R
+162,Samoa,2020.0,4.8,S
+163,San Marino,2019.0,3.4,S
+164,Sao Tome and Principe,2020.0,5.0,S
+165,Saudi Arabia,2020.0,7.8,S
+166,Senegal,2020.0,5.5,S
+167,Serbia,2019.0,3.6,S
+168,Seychelles,2020.0,5.2,S
+169,Sierra Leone,2020.0,8.8,S
+170,Singapore,2020.0,2.5,S
+171,Sint Maarten (Dutch part),,,S
+172,Slovak Republic,2018.0,4.0,S
+173,Slovenia,2018.0,4.9,S
+174,Solomon Islands,2020.0,12.8,S
+175,Somalia,1973.0,1.3,S
+176,South Africa,2020.0,6.2,S
+177,South Sudan,2016.0,1.5,S
+178,Spain,2018.0,4.2,S
+179,Sri Lanka,2019.0,1.9,S
+180,St. Kitts and Nevis,2019.0,4.3,S
+181,St. Lucia,2020.0,3.6,S
+182,St. Martin (French part),,,S
+183,St. Vincent and the Grenadines,2018.0,5.7,S
+184,Sudan,2009.0,2.0,S
+185,Suriname,2020.0,5.0,S
+186,Sweden,2018.0,7.6,S
+187,Switzerland,2018.0,4.9,S
+188,Syrian Arab Republic,2009.0,5.1,S
+189,Tajikistan,2019.0,5.7,T
+190,Tanzania,2021.0,3.3,T
+191,Thailand,2019.0,3.0,T
+192,Timor-Leste,2018.0,6.7,T
+193,Togo,2020.0,4.0,T
+194,Tonga,2019.0,8.0,T
+195,Trinidad and Tobago,2020.0,4.1,T
+196,Tunisia,2016.0,7.3,T
+197,Turkiye,2018.0,4.3,T
+198,Turkmenistan,2019.0,3.1,T
+199,Turks and Caicos Islands,2021.0,4.5,T
+200,Tuvalu,1997.0,3.7,T
+201,Uganda,2021.0,2.7,U
+202,Ukraine,2019.0,5.4,U
+203,United Arab Emirates,2020.0,3.9,U
+204,United Kingdom,2018.0,5.2,U
+205,United States,2018.0,4.9,U
+206,Uruguay,2019.0,4.7,U
+207,Uzbekistan,2020.0,4.9,U
+208,Vanuatu,2020.0,2.2,V
+209,"Venezuela, RB",2017.0,1.3,V
+210,Vietnam,2019.0,4.1,V
+211,Virgin Islands (U.S.),,,V
+212,West Bank and Gaza,2018.0,5.3,W
+213,"Yemen, Rep.",2008.0,5.2,Y
+214,Zambia,2020.0,3.7,Z
+215,Zimbabwe,2018.0,3.9,Z
+216,World,2019.0,3.7,W
+217,Arab World,2019.0,3.4,A
+218,Caribbean small states,2021.0,6.0,C
+219,Central Europe and the Baltics,2018.0,4.3,C
+220,East Asia & Pacific,2019.0,3.2,E
+221,East Asia & Pacific (excluding high income),2019.0,3.2,E
+222,Euro area,2018.0,4.8,E
+223,Europe & Central Asia,2018.0,4.7,E
+224,Europe & Central Asia (excluding high income),2019.0,3.9,E
+225,European Union,2018.0,4.6,E
+226,Fragile and conflict affected situations,2018.0,3.3,F
+227,Heavily indebted poor countries (HIPC),2020.0,3.3,H
+228,Latin America & Caribbean,2020.0,4.4,L
+229,Latin America & Caribbean (excluding high income),2020.0,4.6,L
+230,Least developed countries: UN classification,2020.0,3.1,L
+231,Middle East & North Africa,2019.0,3.8,M
+232,Middle East & North Africa (excluding high income),2019.0,3.3,M
+233,North America,2018.0,4.9,N
+234,OECD members,2018.0,4.9,O
+235,Other small states,2020.0,3.9,O
+236,Pacific island small states,,,P
+237,Small states,2020.0,4.4,S
+238,South Asia,2019.0,2.9,S
+239,Sub-Saharan Africa,2020.0,3.4,S
+240,Sub-Saharan Africa (excluding high income),2020.0,3.4,S
+241,High income,2018.0,4.8,H
+242,Low & middle income,2020.0,3.9,L
+243,Low income,2020.0,3.1,L
+244,Lower middle income,2019.0,3.7,L
+245,Middle income,2019.0,3.8,M
+246,Upper middle income,2020.0,4.4,U
