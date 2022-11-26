@@ -71,11 +71,11 @@ def reducer(input_map, option, queries, multiselect):
         quer_key = queries[0]
         for item in input_map:
             if quer_key == "location":
-                index_loc = multiselect.index("location") + 1
+                index_loc = multiselect.index("location")
                 if item[2][index_loc] == queries[1]:
                     return_lst.append(item)
             if quer_key == "perc intl students":
-                index_intl = multiselect.index("perc intl students") + 1
+                index_intl = multiselect.index("perc intl students")
                 intl_perc = queries[2]
                 if queries[1] == "above":
                     if item[2][index_intl] > intl_perc:
@@ -84,13 +84,13 @@ def reducer(input_map, option, queries, multiselect):
                     if item[2][index_intl] < intl_perc:
                         return_lst.append(item)
             if quer_key == "number students":
-                index_intl = multiselect.index("number students") + 1
+                index_numstu = multiselect.index("number students")
                 num_edge_stu = queries[2]
                 if queries[1] == "above":
-                    if item[2][2] > num_edge_stu:
+                    if item[2][index_numstu] > num_edge_stu:
                         return_lst.append(item)
                 else:
-                    if item[2][2] < num_edge_stu:
+                    if item[2][index_numstu] < num_edge_stu:
                         return_lst.append(item)
 
     return return_lst
@@ -161,7 +161,6 @@ def search_students_staff_ratio(databaseURL):
         num = st.slider("Select top xxx universities to return: ", min_value=0, max_value=20)
         multiselect_2 = st.multiselect("Additional Attributes options",
                                        options=("location", "perc intl students", "number students"))
-        submitted_option2 = st.form_submit_button("Submit")
 
         if multiselect_2:
             f"Attributes selected: {'; '.join(i for i in multiselect_2)}。"
@@ -190,8 +189,10 @@ def search_students_staff_ratio(databaseURL):
             if my_radio2 and ratio_22:
                 st.write("Results contain universities that have students number ", my_radio2, ratio_22)
 
+        submitted_option2 = st.form_submit_button("Submit")
         if submitted_option2:
             search_attributes = ['students staff ratio'] + multiselect_2
+            print(search_attributes)
             map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
             map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
             map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
@@ -200,42 +201,42 @@ def search_students_staff_ratio(databaseURL):
             # reduce with additional attributes first
             reduced = map_all
             if "location" in multiselect_2:
-                red_loc = reducer(reduced, 'option_2', ["location", country])
+                red_loc = reducer(reduced, 'option_2', ["location", country], search_attributes)
                 reduced = red_loc
             if "perc intl students" in multiselect_2:
-                red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc])
+                red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc], search_attributes)
                 reduced = red_intl
             if "number students" in multiselect_2:
-                red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22])
+                red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22], search_attributes)
                 reduced = red_numStu
 
             # then find the top xx universities with staff ratio
-            reduced.sort(key=lambda x: x[1][0])
+            reduced.sort(key=lambda x: x[2][0])
 
-            c_out = st.container()
-            with c_out:
-                out_reduced = []
-                for i in range(len(reduced)):
-                    tmp = []
-                    ranking = reduced[i][0]
-                    tmp.append(ranking)
-                    ss_ratio = reduced[i][1][0]
-                    tmp.append(ss_ratio)
-                    for j in range(len(search_attributes)):
-                        if search_attributes[j] == 'location':
-                            location = reduced[i][1][j]
-                            tmp.append(location)
-                        if search_attributes[j] == "perc intl students":
-                            intl_ratio = toPercent(reduced[i][1][j])
-                            tmp.append(intl_ratio)
-                        if search_attributes[j] == "number students":
-                            num_stu = reduced[i][1][j]
-                            tmp.append(num_stu)
-                    out_reduced.append(tmp)
+            out_reduced = []
+            for i in range(len(reduced)):
+                tmp = []
+                ranking = reduced[i][0]
+                tmp.append(ranking)
+                title = reduced[i][1]
+                tmp.append(title)
+                ss_ratio = format(reduced[i][2][0], '.1f')
+                tmp.append(ss_ratio)
+                for j in range(len(search_attributes)):
+                    if search_attributes[j] == 'location':
+                        location = reduced[i][2][j]
+                        tmp.append(location)
+                    if search_attributes[j] == "perc intl students":
+                        intl_ratio = toPercent(reduced[i][2][j])
+                        tmp.append(intl_ratio)
+                    if search_attributes[j] == "number students":
+                        num_stu = reduced[i][2][j]
+                        tmp.append(num_stu)
+                out_reduced.append(tmp)
 
-                column_name = ['Ranking'] + search_attributes
-                output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
-                st.dataframe(output_dataframe)
+            column_name = ['Ranking', 'Title'] + search_attributes
+            output_dataframe = pd.DataFrame(out_reduced, columns=column_name).head(num)
+            st.dataframe(output_dataframe)
     return
 
 
@@ -252,43 +253,6 @@ def main():
 
     ############################################# TEST
 
-    multiselect_2 = ['location', "perc intl students", "number students"]
-    search_attributes = ['students staff ratio'] + multiselect_2
-    map3 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
-
-    reduced = map3
-    red_loc = reducer(reduced, 'option_2', ["location", 'Australia'], multiselect=multiselect_2)
-    reduced = red_loc
-    red_intl = reducer(reduced, 'option_2', ["perc intl students", "above", 0.2], multiselect=multiselect_2)
-    reduced = red_intl
-    red_numStu = reducer(reduced, 'option_2', ["number students", "above", 10000], multiselect=multiselect_2)
-    reduced = red_numStu
-    reduced.sort(key=lambda x: x[1][0])
-
-
-    out_reduced = []
-    for i in range(len(reduced)):
-        tmp = []
-        ranking = reduced[i][0]
-        tmp.append(ranking)
-        ss_ratio = reduced[i][1][0]
-        tmp.append(ss_ratio)
-        for j in range(len(search_attributes)):
-            if search_attributes[j] == 'location':
-                location = reduced[i][1][j]
-                tmp.append(location)
-            if search_attributes[j] == "perc intl students":
-                intl_ratio = toPercent(reduced[i][1][j])
-                tmp.append(intl_ratio)
-            if search_attributes[j] == "number students":
-                num_stu = reduced[i][1][j]
-                tmp.append(num_stu)
-        out_reduced.append(tmp)
-
-    column_name = ['Ranking', 'title'] + search_attributes
-    output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
-    st.dataframe(output_dataframe)
-    st.dataframe(output_dataframe.head(5))
     #############################################
 
     c_options = st.container()
