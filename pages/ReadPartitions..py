@@ -21,25 +21,26 @@ def main():
         dbName = json.loads(requests.get(baseURL+"FileLocations/"+fileName+"/dbname.json").text)
 
         if dbName == "FIREBASE":
-            #search the Parent directory in the which the file located. 
+            #search the Parent direction in the which the file located. 
             previousNode = json.loads(requests.get(baseURL+"/Metadata/"+str(fileName)+"1/previousNode.json").text)
      
             path = ""
             while previousNode != 0:
                 #get the parent directory
-                previousNodeData = json.loads(requests.get(baseURL+'/Metadata.json?orderBy="id"&equalTo=1').text)
+                previousNodeData = json.loads(requests.get(baseURL+'/Metadata.json?orderBy="id"&equalTo='+str(previousNode)).text)
                 #update the previousNode
                 directoryName = list(previousNodeData.keys())[0]
                 previousNode = previousNodeData[directoryName]['previousNode']
                 path = directoryName+"/"
             
             # get the data from the partition
-            #finalPath = path+fileName+str(partitionNumber) 
+            finalPath = path+fileName+str(partitionNumber) 
             data = json.loads(requests.get(baseURL+"/Data/"+directoryName+"/"+fileName+str(partitionNumber)+".json").text)
             json_object = json.dumps(data) 
-             #print(json_object)
+            #print(json_object)
             df = pd.read_json(json_object, orient ='records')
             st.write(df)
+            #print(data)
         elif dbName == "MONGODB":
             # Connecting to MongodB
             client = MongoClient("mongodb+srv://DSCI551Project:Dsci551@cluster0.2sh73fu.mongodb.net/?retryWrites=true&w=majority")

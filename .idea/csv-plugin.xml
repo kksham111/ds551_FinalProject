@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\CountryDataP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\GDPExpendenditure_in_percentage_R.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\universities_ranking.csv">
           <value>
             <Attribute>

@@ -75,7 +75,8 @@ def search_ranking(databaseURL):
 
     return_list = list_combiner(satisfied_1, satisfied_2, satisfied_3)
     return_list.sort(key=lambda x: x[1])
-    st.dataframe(return_list)
+    output_dataframe = pd.DataFrame(return_list, columns=['ranking', 'ranking', 'title'])
+    st.dataframe(output_dataframe)
     # data = json.loads(requests.get(baseURL+".json").text)
     # data_P1 = data['Data']['User']['universities_ranking_P1']
     # data_P2 = data['Data']['User']['universities_ranking_P2']
