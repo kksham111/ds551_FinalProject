@@ -31,7 +31,7 @@ def mapPartition(baseURL, dataset, partition_num, key, value):
     for i in range(len(data)):
         key_i = data[i][key]
         ranking_i = data[i]['ranking']
-
+        name_i = data[i]['title']
         return_i = []
         if value is not None:
             for item in value:
@@ -51,42 +51,46 @@ def mapPartition(baseURL, dataset, partition_num, key, value):
                 if item == "number students":
                     data[i][item] = int(data[i][item])
                 return_i.append(data[i][item])
-        map_list.append((key_i, return_i))
+        map_list.append((key_i, name_i, return_i))
     return map_list
 
 
-def reducer(input_map, option, queries):
+def reducer(input_map, option, queries, multiselect):
     # read in map for each partition
     # output reduced
     return_lst = []
+
     if option == 'option_1':
         lower_num = queries[1]
         upper_num = queries[2]
         for item in input_map:
             if lower_num <= int(item[0]) <= upper_num:
-                return_lst.append(item)
+                return_lst.append([item[0],item[1]])
 
     if option == 'option_2':
         quer_key = queries[0]
         for item in input_map:
             if quer_key == "location":
-                if item[1][1] == queries[1]:
+                index_loc = multiselect.index("location") + 1
+                if item[2][index_loc] == queries[1]:
                     return_lst.append(item)
             if quer_key == "perc intl students":
+                index_intl = multiselect.index("perc intl students") + 1
                 intl_perc = queries[2]
                 if queries[1] == "above":
-                    if item[1][2] > intl_perc:
+                    if item[2][index_intl] > intl_perc:
                         return_lst.append(item)
                 else:
-                    if item[1][2] < intl_perc:
+                    if item[2][index_intl] < intl_perc:
                         return_lst.append(item)
             if quer_key == "number students":
+                index_intl = multiselect.index("number students") + 1
                 num_edge_stu = queries[2]
                 if queries[1] == "above":
-                    if item[1][3] > num_edge_stu:
+                    if item[2][2] > num_edge_stu:
                         return_lst.append(item)
                 else:
-                    if item[1][3] < num_edge_stu:
+                    if item[2][2] < num_edge_stu:
                         return_lst.append(item)
 
     return return_lst
@@ -118,7 +122,7 @@ def search_ranking(databaseURL):
     map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=['title'])
     map_all = list_combiner(map1, map2, map3)
 
-    satisfied = reducer(map_all, 'option_1', ['ranking', lower_num, upper_num])
+    satisfied = reducer(map_all, 'option_1', ['ranking', lower_num, upper_num], None)
     satisfied.sort(key=lambda x: x[0])
 
     c_out = st.container()
@@ -153,19 +157,11 @@ def search_ranking(databaseURL):
 
 
 def search_students_staff_ratio(databaseURL):
-    st.cache()
-    c_op2_input = st.container()
-    with c_op2_input:
+    with st.form("input_option2"):
         num = st.slider("Select top xxx universities to return: ", min_value=0, max_value=20)
-
-        # button_2_1 = st.button("Submit", key="button_2_1")
-        # if not button_2_1:
-        #     st.stop()
         multiselect_2 = st.multiselect("Additional Attributes options",
                                        options=("location", "perc intl students", "number students"))
-        button_2_2 = st.button("Submit", key="button_2_2")
-        if not button_2_2:
-            st.stop()
+        submitted_option2 = st.form_submit_button("Submit")
 
         if multiselect_2:
             f"Attributes selected: {'; '.join(i for i in multiselect_2)}。"
@@ -180,64 +176,66 @@ def search_students_staff_ratio(databaseURL):
                 my_radio = st.radio(label=" ", key="intl_ratio", options=("above", "below"), label_visibility='hidden')
             with c_2_r:
                 ratio_2 = st.number_input("Please enter a number", min_value=0, max_value=100, value=10)
-                ratio_2_perc = ratio_2/100
+                ratio_2_perc = ratio_2 / 100
             if my_radio and ratio_2:
                 st.write("Results contain universities that have a international student ratio ", my_radio, ratio_2,
                          "%")
         if "number students" in multiselect_2:
             c_2_l2, c_2_r2 = st.columns(2)
             with c_2_l2:
-                my_radio2 = st.radio(label=" ", key="number students", options=("above", "below"), label_visibility='hidden')
+                my_radio2 = st.radio(label=" ", key="number students", options=("above", "below"),
+                                     label_visibility='hidden')
             with c_2_r2:
                 ratio_22 = st.number_input("Please enter a number", min_value=0, value=10000)
             if my_radio2 and ratio_22:
                 st.write("Results contain universities that have students number ", my_radio2, ratio_22)
 
-    search_attributes = ['students staff ratio'] + multiselect_2
-    map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
-    map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
-    map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
-    map_all = list_combiner(map1, map2, map3)
+        if submitted_option2:
+            search_attributes = ['students staff ratio'] + multiselect_2
+            map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
+            map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
+            map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
+            map_all = list_combiner(map1, map2, map3)
 
-    # reduce with additional attributes first
-    reduced = map_all
-    if "location" in multiselect_2:
-        red_loc = reducer(reduced, 'option_2', ["location", country])
-        reduced = red_loc
-    if "perc intl students" in multiselect_2:
-        red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc])
-        reduced = red_intl
-    if "number students" in multiselect_2:
-        red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22])
-        reduced = red_numStu
+            # reduce with additional attributes first
+            reduced = map_all
+            if "location" in multiselect_2:
+                red_loc = reducer(reduced, 'option_2', ["location", country])
+                reduced = red_loc
+            if "perc intl students" in multiselect_2:
+                red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc])
+                reduced = red_intl
+            if "number students" in multiselect_2:
+                red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22])
+                reduced = red_numStu
 
-    # then find the top xx universities with staff ratio
-    reduced.sort(key=lambda x: x[1][0])
+            # then find the top xx universities with staff ratio
+            reduced.sort(key=lambda x: x[1][0])
 
-    c_out = st.container()
-    with c_out:
-        out_reduced = []
-        for i in range(len(reduced)):
-            tmp = []
-            ranking = reduced[i][0]
-            tmp.append(ranking)
-            ss_ratio = reduced[i][1][0]
-            tmp.append(ss_ratio)
-            for j in range(len(search_attributes)):
-                if search_attributes[j] == 'location':
-                    location = reduced[i][1][j]
-                    tmp.append(location)
-                if search_attributes[j] == "perc intl students":
-                    intl_ratio = toPercent(reduced[i][1][j])
-                    tmp.append(intl_ratio)
-                if search_attributes[j] == "number students":
-                    num_stu = reduced[i][1][j]
-                    tmp.append(num_stu)
-            out_reduced.append(tmp)
+            c_out = st.container()
+            with c_out:
+                out_reduced = []
+                for i in range(len(reduced)):
+                    tmp = []
+                    ranking = reduced[i][0]
+                    tmp.append(ranking)
+                    ss_ratio = reduced[i][1][0]
+                    tmp.append(ss_ratio)
+                    for j in range(len(search_attributes)):
+                        if search_attributes[j] == 'location':
+                            location = reduced[i][1][j]
+                            tmp.append(location)
+                        if search_attributes[j] == "perc intl students":
+                            intl_ratio = toPercent(reduced[i][1][j])
+                            tmp.append(intl_ratio)
+                        if search_attributes[j] == "number students":
+                            num_stu = reduced[i][1][j]
+                            tmp.append(num_stu)
+                    out_reduced.append(tmp)
 
-        column_name = ['Ranking'] + search_attributes
-        output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
-        st.dataframe(output_dataframe)
+                column_name = ['Ranking'] + search_attributes
+                output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
+                st.dataframe(output_dataframe)
     return
 
 
@@ -254,36 +252,43 @@ def main():
 
     ############################################# TEST
 
+    multiselect_2 = ['location', "perc intl students", "number students"]
+    search_attributes = ['students staff ratio'] + multiselect_2
+    map3 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
 
-    # map3 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=['students staff ratio',
-    #                                                                                       'location',
-    #                                                                                       "perc intl students",
-    #                                                                                       "number students"])
-    # reduced = map3
-    # red_loc = reducer(reduced, 'option_2', ["location", 'Australia'])
-    # reduced = red_loc
-    # red_intl = reducer(reduced, 'option_2', ["perc intl students", "above", 0.2])
-    # reduced = red_intl
-    # red_numStu = reducer(reduced, 'option_2', ["number students", "above", 10000])
-    # reduced = red_numStu
-    # reduced.sort(key=lambda x: x[1][0])
-    #
-    # out_reduced = []
-    # for i in range(len(reduced)):
-    #     tmp = []
-    #     ranking = reduced[i][0]
-    #     ss_ratio = reduced[i][1][0]
-    #     location = reduced[i][1][1]
-    #     intl_ratio = toPercent(reduced[i][1][2])
-    #     num_stu = reduced[i][1][3]
-    #     tmp.append(ranking)
-    #     tmp.append(ss_ratio)
-    #     tmp.append(location)
-    #     tmp.append(intl_ratio)
-    #     tmp.append(num_stu)
-    #     out_reduced.append(tmp)
-    # output_dataframe = pd.DataFrame(reduced, columns=['Ranking', 'UniversityName'])
-    # st.dataframe(output_dataframe.head(5))
+    reduced = map3
+    red_loc = reducer(reduced, 'option_2', ["location", 'Australia'], multiselect=multiselect_2)
+    reduced = red_loc
+    red_intl = reducer(reduced, 'option_2', ["perc intl students", "above", 0.2], multiselect=multiselect_2)
+    reduced = red_intl
+    red_numStu = reducer(reduced, 'option_2', ["number students", "above", 10000], multiselect=multiselect_2)
+    reduced = red_numStu
+    reduced.sort(key=lambda x: x[1][0])
+
+
+    out_reduced = []
+    for i in range(len(reduced)):
+        tmp = []
+        ranking = reduced[i][0]
+        tmp.append(ranking)
+        ss_ratio = reduced[i][1][0]
+        tmp.append(ss_ratio)
+        for j in range(len(search_attributes)):
+            if search_attributes[j] == 'location':
+                location = reduced[i][1][j]
+                tmp.append(location)
+            if search_attributes[j] == "perc intl students":
+                intl_ratio = toPercent(reduced[i][1][j])
+                tmp.append(intl_ratio)
+            if search_attributes[j] == "number students":
+                num_stu = reduced[i][1][j]
+                tmp.append(num_stu)
+        out_reduced.append(tmp)
+
+    column_name = ['Ranking'] + search_attributes
+    output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
+    st.dataframe(output_dataframe)
+    st.dataframe(output_dataframe.head(5))
     #############################################
 
     c_options = st.container()
