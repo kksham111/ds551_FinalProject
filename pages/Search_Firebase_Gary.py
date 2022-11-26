@@ -285,7 +285,7 @@ def main():
                 tmp.append(num_stu)
         out_reduced.append(tmp)
 
-    column_name = ['Ranking'] + search_attributes
+    column_name = ['Ranking', 'title'] + search_attributes
     output_dataframe = pd.DataFrame(out_reduced, columns=column_name)
     st.dataframe(output_dataframe)
     st.dataframe(output_dataframe.head(5))
