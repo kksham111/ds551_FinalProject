@@ -24,13 +24,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\universities_ranking.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\universities_ranking_P.csv">
           <value>
             <Attribute>
