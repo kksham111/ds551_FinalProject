@@ -72,6 +72,11 @@ def search_country(databaseURL):
     return_obj = list(db.Data.find({'CountryDataP': {'$exists': True}}))[0]
     return_data = return_obj['CountryDataP']
 
+    # print input data
+    st.write("First some lines of Data Structure example:")
+    st.write(list(return_data))
+    st.write(list(return_data['CountryDataP1'])[0:2])
+
     input_12 = st.text_input("Enter attributes you want to sort with:", key="M_op1_in_2")
     if input_12 not in return_data['CountryDataP1'][0].keys():
         st.warning("Please enter valid attributes.")
@@ -88,10 +93,19 @@ def search_country(databaseURL):
         input_12 = st.session_state["M_op1_in_2"]
         input_13 = st.session_state["M_op1_in_3"]
         map1 = mapPartition(return_data, 'CountryDataP', "1", 'Country',  input_12, [input_13])
+
+        # print result for map
+        st.write("First some lines of the result MAP1 comes from the map function:")
+        st.write(map1[0:5])
+
         map2 = mapPartition(return_data, 'CountryDataP', "2", 'Country',  input_12, [input_13])
         map3 = mapPartition(return_data, 'CountryDataP', "3", 'Country',  input_12, [input_13])
+
         map_all = map1 + map2 + map3
         reduced = reducer(map_all, 'option_1', queries=num, multiselect=None)
+        # print result after reduced
+        st.write("First some lines of the result REDUCED after the reduce function:")
+        st.write(reduced[0:5])
 
         title = ['Country'] + [input_12] + [input_13]
         output_dataframe = pd.DataFrame(reduced, columns=title).head(num)
@@ -116,13 +130,25 @@ def search_GDP(databaseURL):
         input_22 = st.session_state["M_op2_in_2"]
         year = int(input_22)
 
+        # print input data
+        st.write("First some lines of Data Structure example:")
+        st.write(list(return_data))
+        st.write(list(return_data['GDPExpendenditure_in_percentage_R1'])[0:2])
+
         map1 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "1", 'Country', 'Year', ['% of GDP'])
+        # print result for map
+        st.write("First some lines of the result MAP1 comes from the map function:")
+        st.write(map1[0:5])
         map2 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "2", 'Country', 'Year', ['% of GDP'])
         map3 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "3", 'Country', 'Year', ['% of GDP'])
         map_all = map1 + map2 + map3
 
         reduced = reducer(map_all, 'option_2', [year, num], multiselect=None)
+        # print unsorted result after reduced
+        st.write("First some lines of the result REDUCED after the reduce function:")
+        st.write(reduced[0:5])
         reduced.sort(key=lambda x: x[2])   # highest comes first
+
         title = ['Country', 'Year', 'Percentage of GDP']
         output_dataframe = pd.DataFrame(reduced).head(10)
         output_dataframe[2] = output_dataframe[2].apply(lambda x: str(x) + '%')
@@ -142,6 +168,30 @@ def main():
         c_URL.success('✔️ Success!')
     else:
         st.stop()
+
+    # client = MongoClient(databaseURL)
+    # db = client["proj"]
+    # data_collection = db.Data
+    #
+    # return_obj = list(data_collection.find({'GDPExpendenditure_in_percentage_R': {'$exists': True}}))[0]
+    # return_data = return_obj['GDPExpendenditure_in_percentage_R']
+    # # print input data
+    # st.write(list(return_data))
+    # st.write(list(return_data['GDPExpendenditure_in_percentage_R1'])[0:2])
+    # map1 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "1", 'Country', 'Year', ['% of GDP'])
+    # map2 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "2", 'Country', 'Year', ['% of GDP'])
+    # map3 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "3", 'Country', 'Year', ['% of GDP'])
+    # map_all = map1+map2+map3
+    #
+    # reduced = reducer(map_all, 'option_2', [2021, 5], multiselect=None)
+    # reduced.sort(key=lambda x: x[2], reverse=True)
+    # title = ['Country', 'Year', 'Percentage of GDP']
+    # output_dataframe = pd.DataFrame(reduced).head(10)
+    # output_dataframe[2].apply(lambda x: '%.2f%%'%x)
+    # output_dataframe.columns = title
+    # # st.write("The following dataframe shows the top ", num, "countries in ", input_12, ":")
+    # st.write(output_dataframe)
+
 
     c_options = st.container()
     with c_options:
