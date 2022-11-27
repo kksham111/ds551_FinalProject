@@ -118,11 +118,21 @@ def search_ranking(databaseURL):
                 st.stop()
 
     map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=['title'])
+
+    # print result for map
+    st.write("First some lines of the result MAP1 comes from the map function:")
+    st.write(map1[0:5])
+
     map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=['title'])
     map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=['title'])
     map_all = list_combiner(map1, map2, map3)
 
     satisfied = reducer(map_all, 'option_1', ['ranking', lower_num, upper_num], None)
+
+    # print result after reduced
+    st.write("First some lines of the result REDUCED after the reduce function:")
+    st.write(satisfied[0:5])
+
     satisfied.sort(key=lambda x: x[0])
 
     c_out = st.container()
@@ -184,6 +194,11 @@ def search_students_staff_ratio(databaseURL):
 
         search_attributes = ['students staff ratio'] + multiselect_2
         map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
+
+        # print result for map
+        st.write("First some lines of the result MAP1 comes from the map function:")
+        st.write(map1[0:5])
+
         map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
         map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
         map_all = list_combiner(map1, map2, map3)
@@ -199,6 +214,10 @@ def search_students_staff_ratio(databaseURL):
         if "number students" in multiselect_2:
             red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22], search_attributes)
             reduced = red_numStu
+
+        # print result after reduced
+        st.write("First some lines of the result REDUCED after the reduce function:")
+        st.write(reduced[0:5])
 
         # then find the top xx universities with staff ratio
         reduced.sort(key=lambda x: x[2][0])
@@ -258,6 +277,7 @@ def main():
             search_ranking(databaseURL)
         if option_selectbox == options_list[2]:
             search_students_staff_ratio(databaseURL)
+
 
 
 if __name__ == "__main__":
