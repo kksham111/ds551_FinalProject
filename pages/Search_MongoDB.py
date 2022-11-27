@@ -11,6 +11,11 @@ def clean_paranthesis(str):
     return re.sub('"', "", str)
 
 
+def clean_perc(str):
+    a = float(re.sub('%', "", str))
+    return a
+
+
 def mapPartition(data, dataname, partition_num, key, sort, value):
     # data is divided into certain partitions
     # mapPartition() read data and take a partition as input
@@ -46,67 +51,84 @@ def reducer(input_map, option, queries, multiselect):
     if option == 'option_1':
         input_map.sort(key=lambda x: x[1], reverse=True)
         return_lst = input_map[0:queries]
-    # if option == 'option_2':
-    #     quer_key = queries[0]
-    #     for item in input_map:
-    #         if quer_key == "location":
-    #             index_loc = multiselect.index("location")
-    #             if item[2][index_loc] == queries[1]:
-    #                 return_lst.append(item)
-    #         if quer_key == "perc intl students":
-    #             index_intl = multiselect.index("perc intl students")
-    #             intl_perc = queries[2]
-    #             if queries[1] == "above":
-    #                 if item[2][index_intl] > intl_perc:
-    #                     return_lst.append(item)
-    #             else:
-    #                 if item[2][index_intl] < intl_perc:
-    #                     return_lst.append(item)
-    #         if quer_key == "number students":
-    #             index_numstu = multiselect.index("number students")
-    #             num_edge_stu = queries[2]
-    #             if queries[1] == "above":
-    #                 if item[2][index_numstu] > num_edge_stu:
-    #                     return_lst.append(item)
-    #             else:
-    #                 if item[2][index_numstu] < num_edge_stu:
-    #                     return_lst.append(item)
+    if option == 'option_2':
+        target_year = queries[0]
+        target_gdp = queries[1]
+        for i in range(len(input_map)):
+            if input_map[i][1] == target_year:
+                input_map[i][1] = int(input_map[i][1])
+                if input_map[i][2] > target_gdp:
+                    format(input_map[i][2], '.1f')
+                    return_lst.append(input_map[i])
 
     return return_lst
 
 
 def search_country(databaseURL):
-    input_1 = st.text_input("Number of countries to return(max: 228): ",  key="M_op1_in_1")
+    input_11 = st.text_input("Number of countries to return(max: 228): ",  key="M_op1_in_1")
 
     client = MongoClient(databaseURL)
     db = client["proj"]
     return_obj = list(db.Data.find({'CountryDataP': {'$exists': True}}))[0]
     return_data = return_obj['CountryDataP']
 
-    input_2 = st.text_input("Enter attributes you want to sort with:", key="M_op1_in_2")
-    if input_2 not in return_data['CountryDataP1'][0].keys():
+    input_12 = st.text_input("Enter attributes you want to sort with:", key="M_op1_in_2")
+    if input_12 not in return_data['CountryDataP1'][0].keys():
         st.warning("Please enter valid attributes.")
 
-    input_3 = st.text_input("Enter additional attributes to show in the result:", key="M_op1_in_3")
-    if input_3 not in return_data['CountryDataP1'][0].keys():
+    input_13 = st.text_input("Enter additional attributes to show in the result:", key="M_op1_in_3")
+    if input_13 not in return_data['CountryDataP1'][0].keys():
         st.warning("Please enter valid attributes.")
 
     button_Mon_o1 = st.button("Continue", key="continue_Mon_o1")
 
     if button_Mon_o1:
-        input_1 = st.session_state["M_op1_in_1"]
-        num = int(input_1)
-        input_2 = st.session_state["M_op1_in_2"]
-        input_3 = st.session_state["M_op1_in_3"]
-        map1 = mapPartition(return_data, 'CountryDataP', "1", 'Country',  input_2, [input_3])
-        map2 = mapPartition(return_data, 'CountryDataP', "2", 'Country',  input_2, [input_3])
-        map3 = mapPartition(return_data, 'CountryDataP', "3", 'Country',  input_2, [input_3])
+        input_11 = st.session_state["M_op1_in_1"]
+        num = int(input_11)
+        input_12 = st.session_state["M_op1_in_2"]
+        input_13 = st.session_state["M_op1_in_3"]
+        map1 = mapPartition(return_data, 'CountryDataP', "1", 'Country',  input_12, [input_13])
+        map2 = mapPartition(return_data, 'CountryDataP', "2", 'Country',  input_12, [input_13])
+        map3 = mapPartition(return_data, 'CountryDataP', "3", 'Country',  input_12, [input_13])
         map_all = map1 + map2 + map3
         reduced = reducer(map_all, 'option_1', queries=num, multiselect=None)
 
-        title = ['Country'] + [input_2] + [input_3]
+        title = ['Country'] + [input_12] + [input_13]
         output_dataframe = pd.DataFrame(reduced, columns=title).head(num)
-        st.write("The following dataframe shows the top ", num, "countries in ", input_2, ":")
+        st.write("The following dataframe shows the top ", num, "countries in ", input_12, ":")
+        st.write(output_dataframe)
+
+
+def search_GDP(databaseURL):
+    client = MongoClient(databaseURL)
+    db = client["proj"]
+    return_obj = list(db.Data.find({'GDPExpendenditure_in_percentage_R': {'$exists': True}}))[0]
+    return_data = return_obj['GDPExpendenditure_in_percentage_R']
+
+    input_21 = st.text_input("Enter a target percentage rate: ",  key="M_op2_in_1")
+    input_22 = st.text_input("Enter a year for searching: ",  key="M_op2_in_2")
+
+    button_Mon_o2 = st.button("Continue", key="continue_Mon_o2")
+
+    if button_Mon_o2:
+        input_21 = st.session_state["M_op2_in_1"]
+        num = clean_perc(input_21)
+        input_22 = st.session_state["M_op2_in_2"]
+        year = int(input_22)
+
+        map1 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "1", 'Country', 'Year', ['% of GDP'])
+        map2 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "2", 'Country', 'Year', ['% of GDP'])
+        map3 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "3", 'Country', 'Year', ['% of GDP'])
+        map_all = map1 + map2 + map3
+
+        reduced = reducer(map_all, 'option_2', [year, num], multiselect=None)
+        reduced.sort(key=lambda x: x[2])   # highest comes first
+        title = ['Country', 'Year', 'Percentage of GDP']
+        output_dataframe = pd.DataFrame(reduced).head(10)
+        output_dataframe[2] = output_dataframe[2].apply(lambda x: str(x) + '%')
+        # output_dataframe[2].apply(lambda x: '%.2f%%' % x)
+        output_dataframe.columns = title
+        st.write("The following DataFrame shows countries that have percentage of GDP higher than", num, "% in ", year, ":")
         st.write(output_dataframe)
 
 
@@ -121,34 +143,18 @@ def main():
     else:
         st.stop()
 
-    # client = MongoClient(databaseURL)
-    # db = client["proj"]
-    # data_collection = db.Data
-    #
-    # return_obj = list(data_collection.find({'CountryDataP': {'$exists': True}}))[0]
-    # return_data = return_obj['CountryDataP']
-    # map1 = mapPartition(return_data, 'CountryDataP', "1", 'Country', 'Population', ['Region', 'Area'])
-    # map2 = mapPartition(return_data, 'CountryDataP', "2", 'Country', 'Population', ['Region', 'Area'])
-    # map3 = mapPartition(return_data, 'CountryDataP', "3", 'Country', 'Population', ['Region', 'Area'])
-    # map_all = map1+map2+map3
-    #
-    # reduced = reducer(map_all, 'option_1', 10, multiselect=None)
-
-
-
-
     c_options = st.container()
     with c_options:
-        options_list = [" ", "Find TOP xxx countries in...",
-                        "Find TOP universities with students staff ratio..."]
+        options_list = [" ", "Find TOP ... countries in...",
+                        "Find GDP expenditure greater than ... in year..."]
         option_selectbox = st.selectbox("Please choose one searching options down below", options_list
                                         )
         if option_selectbox == options_list[0]:
             st.stop()
         if option_selectbox == options_list[1]:
             search_country(databaseURL)
-        # if option_selectbox == options_list[2]:
-        #     search_students_staff_ratio(databaseURL)
+        if option_selectbox == options_list[2]:
+            search_GDP(databaseURL)
 
 
 
