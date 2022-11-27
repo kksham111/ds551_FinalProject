@@ -162,8 +162,8 @@ def main():
     st.title('Search in MongoDB')
 
     c_URL = st.container()
-    databaseURL = "mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority"
-    # databaseURL = c_URL.text_input('Please enter your database URL:  ')
+    databaseURL = c_URL.text_input('Please enter your database URL:  ')
+    st.write('Sample URL: "mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority"')
     if databaseURL:
         c_URL.success('✔️ Success!')
     else:
