@@ -129,114 +129,104 @@ def search_ranking(databaseURL):
     with c_out:
         output_dataframe = pd.DataFrame(satisfied, columns=['Ranking', 'UniversityName'])
         st.dataframe(output_dataframe)
-    # data = json.loads(requests.get(baseURL+".json").text)
-    # data_P1 = data['Data']['User']['universities_ranking_P1']
-    # data_P2 = data['Data']['User']['universities_ranking_P2']
-    # data_P1.sort(key=lambda k: (k.get('ranking', 0)))
-    # data_P2.sort(key=lambda k: (k.get('ranking', 0)))
-
-    # i,j = 0, 0
-    # return_list = []
-    # ranking_i = data_P1[i]['ranking']
-    # ranking_j = data_P2[j]['ranking']
-    # while ranking_i < lower_num:
-    #     i += 1
-    #     ranking_i = data_P1[i]['ranking']
-    # while ranking_j < lower_num:
-    #     j += 1
-    #     ranking_j = data_P2[j]['ranking']
-    # while ranking_j <= upper_num or ranking_i <= upper_num:
-    #     if ranking_j < ranking_i:
-    #         return_list.append(data_P2[j])
-    #         j += 1
-    #         ranking_j = data_P2[j]['ranking']
-    #     else:
-    #         return_list.append(data_P1[i])
-    #         i += 1
-    #         ranking_i = data_P1[i]['ranking']
 
 
 def search_students_staff_ratio(databaseURL):
-    with st.form("input_option2"):
-        num = st.slider("Select top xxx universities to return: ", min_value=0, max_value=20)
-        multiselect_2 = st.multiselect("Additional Attributes options",
-                                       options=("location", "perc intl students", "number students"))
 
-        if multiselect_2:
-            f"Attributes selected: {'; '.join(i for i in multiselect_2)}。"
+    num = st.slider("Select top xxx universities to return: ", key="o2num", min_value=0, max_value=20)
+    multiselect_2 = st.multiselect("Additional Attributes options",
+                                   options=("location", "perc intl students", "number students"))
+    if multiselect_2:
+        f"Attributes selected: {'; '.join(i for i in multiselect_2)}."
 
         if "location" in multiselect_2:
-            country = st.text_input(label="Please input a country name:")
+            country = st.text_input(label="Please input a country name:", key='location')
             if country:
                 st.write("Results contain universities in", country, "only.")
         if "perc intl students" in multiselect_2:
             c_2_l, c_2_r = st.columns(2)
             with c_2_l:
-                my_radio = st.radio(label=" ", key="intl_ratio", options=("above", "below"), label_visibility='hidden')
+                my_radio = st.radio(label=" ", key="intl_ratio_radio", options=("above", "below"), label_visibility='hidden')
             with c_2_r:
-                ratio_2 = st.number_input("Please enter a number", min_value=0, max_value=100, value=10)
-                ratio_2_perc = ratio_2 / 100
+                ratio_2 = st.number_input("Please enter a number -- internatial student ratio", key="ratio2", min_value=0, max_value=100, value=0)
             if my_radio and ratio_2:
                 st.write("Results contain universities that have a international student ratio ", my_radio, ratio_2,
                          "%")
         if "number students" in multiselect_2:
             c_2_l2, c_2_r2 = st.columns(2)
             with c_2_l2:
-                my_radio2 = st.radio(label=" ", key="number students", options=("above", "below"),
+                my_radio2 = st.radio(label=" ", key="numstu_radio", options=("above", "below"),
                                      label_visibility='hidden')
             with c_2_r2:
-                ratio_22 = st.number_input("Please enter a number", min_value=0, value=10000)
+                ratio_22 = st.number_input("Please enter a number -- number of total students", key="numstu_num", min_value=0, value=10000)
             if my_radio2 and ratio_22:
                 st.write("Results contain universities that have students number ", my_radio2, ratio_22)
 
-        submitted_option2 = st.form_submit_button("Submit")
-        if submitted_option2:
-            search_attributes = ['students staff ratio'] + multiselect_2
-            print(search_attributes)
-            map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
-            map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
-            map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
-            map_all = list_combiner(map1, map2, map3)
+    # st.write(st.session_state)
+    button_o2_2 = st.button("Continue", key="continue2")
 
-            # reduce with additional attributes first
-            reduced = map_all
-            if "location" in multiselect_2:
-                red_loc = reducer(reduced, 'option_2', ["location", country], search_attributes)
-                reduced = red_loc
-            if "perc intl students" in multiselect_2:
-                red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc], search_attributes)
-                reduced = red_intl
-            if "number students" in multiselect_2:
-                red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22], search_attributes)
-                reduced = red_numStu
+    if button_o2_2:
+        country, my_radio, ratio_2_perc, my_radio2, ratio_22,num = 0,0,0,0,0,0
+        if "location" in st.session_state:
+            country = st.session_state['location']
+        if "intl_ratio_radio" in st.session_state:
+            my_radio = st.session_state["intl_ratio_radio"]
+        if "ratio2" in st.session_state:
+            ratio_2 = st.session_state['ratio2']
+            ratio_2_perc = ratio_2 / 100
+        if "numstu_radio" in st.session_state:
+            my_radio2 = st.session_state["numstu_radio"]
+        if "numstu_num" in st.session_state:
+            ratio_22 = st.session_state["numstu_num"]
+        if "o2num" in st.session_state:
+            num = st.session_state["o2num"]
+        # st.write(country, my_radio, ratio_2_perc, my_radio2, ratio_22)
 
-            # then find the top xx universities with staff ratio
-            reduced.sort(key=lambda x: x[2][0])
+        search_attributes = ['students staff ratio'] + multiselect_2
+        map1 = mapPartition(databaseURL, "universities_ranking_P", "1", key="ranking", value=search_attributes)
+        map2 = mapPartition(databaseURL, "universities_ranking_P", "2", key="ranking", value=search_attributes)
+        map3 = mapPartition(databaseURL, "universities_ranking_P", "3", key="ranking", value=search_attributes)
+        map_all = list_combiner(map1, map2, map3)
 
-            out_reduced = []
-            for i in range(len(reduced)):
-                tmp = []
-                ranking = reduced[i][0]
-                tmp.append(ranking)
-                title = reduced[i][1]
-                tmp.append(title)
-                ss_ratio = format(reduced[i][2][0], '.1f')
-                tmp.append(ss_ratio)
-                for j in range(len(search_attributes)):
-                    if search_attributes[j] == 'location':
-                        location = reduced[i][2][j]
-                        tmp.append(location)
-                    if search_attributes[j] == "perc intl students":
-                        intl_ratio = toPercent(reduced[i][2][j])
-                        tmp.append(intl_ratio)
-                    if search_attributes[j] == "number students":
-                        num_stu = reduced[i][2][j]
-                        tmp.append(num_stu)
-                out_reduced.append(tmp)
+        # reduce with additional attributes first
+        reduced = map_all
+        if "location" in multiselect_2:
+            red_loc = reducer(reduced, 'option_2', ["location", country], search_attributes)
+            reduced = red_loc
+        if "perc intl students" in multiselect_2:
+            red_intl = reducer(reduced, 'option_2', ["perc intl students", my_radio, ratio_2_perc], search_attributes)
+            reduced = red_intl
+        if "number students" in multiselect_2:
+            red_numStu = reducer(reduced, 'option_2', ["number students", my_radio2, ratio_22], search_attributes)
+            reduced = red_numStu
 
-            column_name = ['Ranking', 'Title'] + search_attributes
-            output_dataframe = pd.DataFrame(out_reduced, columns=column_name).head(num)
-            st.dataframe(output_dataframe)
+        # then find the top xx universities with staff ratio
+        reduced.sort(key=lambda x: x[2][0])
+        # st.dataframe(reduced)
+        out_reduced = []
+        for i in range(len(reduced)):
+            tmp = []
+            ranking = reduced[i][0]
+            tmp.append(ranking)
+            title = reduced[i][1]
+            tmp.append(title)
+            ss_ratio = format(reduced[i][2][0], '.1f')
+            tmp.append(ss_ratio)
+            for j in range(len(search_attributes)):
+                if search_attributes[j] == 'location':
+                    location = reduced[i][2][j]
+                    tmp.append(location)
+                if search_attributes[j] == "perc intl students":
+                    intl_ratio = toPercent(reduced[i][2][j])
+                    tmp.append(intl_ratio)
+                if search_attributes[j] == "number students":
+                    num_stu = reduced[i][2][j]
+                    tmp.append(num_stu)
+            out_reduced.append(tmp)
+
+        column_name = ['Ranking', 'Title'] + search_attributes
+        output_dataframe = pd.DataFrame(out_reduced, columns=column_name).head(num)
+        st.write(output_dataframe)
     return
 
 
@@ -244,12 +234,13 @@ def main():
     st.title('Search in Firebase')
 
     c_URL = st.container()
-    databaseURL = 'https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/'
-    # databaseURL = c_URL.text_input('Please enter your database URL:  ')
-    # if databaseURL:
-    #     c_URL.success('✔️ Success!')
-    # else:
-    #     st.stop()
+    st.text("Sample URL: https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/")
+    # databaseURL = 'https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/'
+    databaseURL = c_URL.text_input('Please enter your database URL:  ')
+    if databaseURL:
+        c_URL.success('✔️ Success!')
+    else:
+        st.stop()
 
     ############################################# TEST
 
