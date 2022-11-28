@@ -285,7 +285,10 @@ def main():
     st.text("Sample URL: https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/")
     # databaseURL = 'https://dsci551-final-project-e495b-default-rtdb.firebaseio.com/'
     databaseURL = c_URL.text_input('Please enter your database URL:  ')
-
+    if databaseURL:
+        c_URL.success('✔️ Success!')
+    else:
+        st.stop()
 
     ############################################# TEST
     multiselect_1 = ["overall score","teaching score","research score","citations score",
