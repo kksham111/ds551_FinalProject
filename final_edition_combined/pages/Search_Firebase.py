@@ -30,7 +30,6 @@ def mapPartition(baseURL, dataset, partition_num, key, value):
 
     for i in range(len(data)):
         key_i = data[i][key]
-        ranking_i = data[i]['ranking']
         name_i = data[i]['title']
         return_i = []
         if value is not None:
@@ -59,6 +58,18 @@ def reducer(input_map, option, queries, multiselect):
     # read in map for each partition
     # output reduced
     return_lst = []
+    if option == 'option_0':
+
+        for item in input_map:
+            lst = []
+            u_ranking = item[0]
+            u_name = item[1]
+            lst.append(u_ranking)
+            lst.append(u_name)
+            for i in range(len(queries)):
+                lst.append(item[2][i])
+            return_lst.append(lst)
+
 
     if option == 'option_1':
         lower_num = queries[1]
@@ -98,6 +109,25 @@ def reducer(input_map, option, queries, multiselect):
 
 def list_combiner(list1, list2, list3):
     return list1 + list2 + list3
+
+
+def search_scores(databaseURL):
+
+    multiselect_1 = st.multiselect("Additional Attributes options",
+                                   options=("overall score","teaching score","research score","citations score",
+                                            "industry income score","intl outlook score"))
+    if multiselect_1:
+        button_o0 = st.button("Continue", key="continue0")
+        if button_o0:
+            map1 = mapPartition(databaseURL, "universities_scores", "1", key="ranking", value=multiselect_1)
+            map2 = mapPartition(databaseURL, "universities_scores", "2", key="ranking", value=multiselect_1)
+            map3 = mapPartition(databaseURL, "universities_scores", "3", key="ranking", value=multiselect_1)
+            map_all = list_combiner(map1, map2, map3)
+            satisfied = reducer(map_all, 'option_0', multiselect_1, None)
+            satisfied.sort(key=lambda x: x[0])
+            column_title = ['Ranking', 'University Title'] + multiselect_1
+            output_dataframe = pd.DataFrame(satisfied, columns=column_title)
+            st.dataframe(output_dataframe)
 
 
 def search_ranking(databaseURL):
@@ -262,20 +292,29 @@ def main():
         st.stop()
 
     ############################################# TEST
-
+    multiselect_1 = ["overall score","teaching score","research score","citations score",
+                                            "industry income score","intl outlook score"]
+    map1 = mapPartition(databaseURL, "universities_scores", "1", key="ranking", value=multiselect_1)
+    map2 = mapPartition(databaseURL, "universities_scores", "2", key="ranking", value=multiselect_1)
+    map3 = mapPartition(databaseURL, "universities_scores", "3", key="ranking", value=multiselect_1)
+    map_all = list_combiner(map1, map2, map3)
+    satisfied = reducer(map_all, 'option_0', multiselect_1, None)
     #############################################
 
     c_options = st.container()
     with c_options:
-        options_list = [" ", "Find universities ranking within certain range...",
+        options_list = [" ", "Find ...(score) from the dataset ",
+                        "Find universities ranking within certain range...",
                         "Find TOP universities with students staff ratio..."]
         option_selectbox = st.selectbox("Please choose one searching options down below", options_list
                                         )
         if option_selectbox == options_list[0]:
             st.stop()
         if option_selectbox == options_list[1]:
-            search_ranking(databaseURL)
+            search_scores(databaseURL)
         if option_selectbox == options_list[2]:
+            search_ranking(databaseURL)
+        if option_selectbox == options_list[3]:
             search_students_staff_ratio(databaseURL)
 
 

@@ -163,7 +163,8 @@ def main():
 
     c_URL = st.container()
     databaseURL = c_URL.text_input('Please enter your database URL:  ')
-    st.write('Sample URL: "mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority"')
+    st.write('Sample URL: ')
+    st.write("mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority")
     if databaseURL:
         c_URL.success('✔️ Success!')
     else:
