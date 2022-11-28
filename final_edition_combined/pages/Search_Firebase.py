@@ -59,7 +59,6 @@ def reducer(input_map, option, queries, multiselect):
     # output reduced
     return_lst = []
     if option == 'option_0':
-
         for item in input_map:
             lst = []
             u_ranking = item[0]
