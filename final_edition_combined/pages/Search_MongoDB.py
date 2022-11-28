@@ -64,10 +64,10 @@ def reducer(input_map, option, queries, multiselect):
     return return_lst
 
 
-def search_country(databaseURL):
+def search_country(databaseURLa):
     input_11 = st.text_input("Number of countries to return(max: 228): ",  key="M_op1_in_1")
 
-    client = MongoClient(databaseURL)
+    client = MongoClient(databaseURLa)
     db = client["proj"]
     return_obj = list(db.Data.find({'CountryDataP': {'$exists': True}}))[0]
     return_data = return_obj['CountryDataP']
@@ -113,8 +113,8 @@ def search_country(databaseURL):
         st.write(output_dataframe)
 
 
-def search_GDP(databaseURL):
-    client = MongoClient(databaseURL)
+def search_GDP(databaseURLb):
+    client = MongoClient(databaseURLb)
     db = client["proj"]
     return_obj = list(db.Data.find({'GDPExpendenditure_in_percentage_R': {'$exists': True}}))[0]
     return_data = return_obj['GDPExpendenditure_in_percentage_R']
@@ -165,31 +165,6 @@ def main():
     databaseURLa = c_URL.text_input('Please enter your database URL:  ')
     st.write('Sample URL: ')
     st.write("mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority")
-
-
-    # client = MongoClient(databaseURL)
-    # db = client["proj"]
-    # data_collection = db.Data
-    #
-    # return_obj = list(data_collection.find({'GDPExpendenditure_in_percentage_R': {'$exists': True}}))[0]
-    # return_data = return_obj['GDPExpendenditure_in_percentage_R']
-    # # print input data
-    # st.write(list(return_data))
-    # st.write(list(return_data['GDPExpendenditure_in_percentage_R1'])[0:2])
-    # map1 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "1", 'Country', 'Year', ['% of GDP'])
-    # map2 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "2", 'Country', 'Year', ['% of GDP'])
-    # map3 = mapPartition(return_data, 'GDPExpendenditure_in_percentage_R', "3", 'Country', 'Year', ['% of GDP'])
-    # map_all = map1+map2+map3
-    #
-    # reduced = reducer(map_all, 'option_2', [2021, 5], multiselect=None)
-    # reduced.sort(key=lambda x: x[2], reverse=True)
-    # title = ['Country', 'Year', 'Percentage of GDP']
-    # output_dataframe = pd.DataFrame(reduced).head(10)
-    # output_dataframe[2].apply(lambda x: '%.2f%%'%x)
-    # output_dataframe.columns = title
-    # # st.write("The following dataframe shows the top ", num, "countries in ", input_12, ":")
-    # st.write(output_dataframe)
-
 
     c_options = st.container()
     with c_options:
