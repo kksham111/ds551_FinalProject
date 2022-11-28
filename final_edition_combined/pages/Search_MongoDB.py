@@ -162,7 +162,7 @@ def main():
     st.title('Search in MongoDB')
 
     c_URL = st.container()
-    databaseURL = c_URL.text_input('Please enter your database URL:  ')
+    databaseURLa = c_URL.text_input('Please enter your database URL:  ')
     st.write('Sample URL: ')
     st.write("mongodb+srv://dsci551:dsci551@cluster0.djzvd82.mongodb.net/?retryWrites=true&w=majority")
 
@@ -200,9 +200,9 @@ def main():
         if option_selectbox == options_list[0]:
             st.stop()
         if option_selectbox == options_list[1]:
-            search_country(databaseURL)
+            search_country(databaseURLa)
         if option_selectbox == options_list[2]:
-            search_GDP(databaseURL)
+            search_GDP(databaseURLa)
 
 
 
